@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Guía educativa para pacientes que toman warfarina: qué es, el INR, vitamina K y alimentación, interacciones y seguridad. Hospital Universitario San Ignacio.">
+<title>Guía para pacientes que toman Warfarina | HUSI</title>
+<style>
+:root{
+  --azul-husi:#0a4c9c;--azul-oscuro:#063a7a;--azul-profundo:#042a5c;--azul-medio:#1565c0;
+  --azul-claro:#e8f1fb;--azul-muy-claro:#f4f9ff;--blanco:#ffffff;
+  --gris-texto:#2b3a4a;--gris-suave:#5b6b7b;--gris-linea:#dbe6f2;--fondo:#f6f9fd;--tarjeta:#ffffff;
+  --verde:#1f9d6b;--verde-claro:#e5f6ee;--naranja:#e8820c;--naranja-claro:#fff2e0;
+  --rojo:#d93a3a;--rojo-claro:#fdeaea;--morado:#6a4bbc;--amarillo:#e8a300;
+  --sombra:0 6px 22px rgba(6,58,122,.10);--sombra-fuerte:0 12px 34px rgba(6,58,122,.18);
+  --radio:18px;--radio-sm:12px;--transicion:.35s cubic-bezier(.4,0,.2,1);
+  --fuente:'Segoe UI',system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;
+}
+[data-theme="dark"]{
+  --azul-claro:#12325c;--azul-muy-claro:#0f2748;--blanco:#16283f;--gris-texto:#e7eef7;
+  --gris-suave:#a9bdd6;--gris-linea:#25406a;--fondo:#0b1a2f;--tarjeta:#122a48;
+  --verde-claro:#123a2c;--naranja-claro:#3a2a12;--rojo-claro:#3d2020;
+  --sombra:0 6px 22px rgba(0,0,0,.35);--sombra-fuerte:0 12px 34px rgba(0,0,0,.5);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--fuente);background:var(--fondo);color:var(--gris-texto);line-height:1.7;font-size:18px;transition:background var(--transicion),color var(--transicion);overflow-x:hidden}
+h1,h2,h3,h4{color:var(--azul-oscuro);line-height:1.25;font-weight:800}
+[data-theme="dark"] h1,[data-theme="dark"] h2,[data-theme="dark"] h3,[data-theme="dark"] h4{color:#dbe9fb}
+p{margin-bottom:1rem}
+a{color:var(--azul-husi);text-decoration:none}
+img,svg{max-width:100%}
+section{scroll-margin-top:90px}
+#barra-progreso{position:fixed;top:0;left:0;height:5px;width:0;background:linear-gradient(90deg,var(--azul-medio),var(--verde));z-index:2000;transition:width .1s linear}
+header.topbar{position:fixed;top:0;left:0;right:0;height:72px;z-index:1500;background:var(--blanco);box-shadow:0 2px 14px rgba(6,58,122,.10);display:flex;align-items:center;gap:14px;padding:0 20px;transition:background var(--transicion)}
+.topbar .logo-husi{display:flex;align-items:center;gap:12px;cursor:pointer}
+.topbar .logo-husi .marca{display:flex;flex-direction:column;line-height:1}
+.topbar .logo-husi .marca b{color:var(--azul-husi);font-size:.98rem;letter-spacing:.3px;font-family:Georgia,'Times New Roman',serif}
+.topbar .logo-husi .marca span{color:var(--gris-suave);font-size:.62rem;letter-spacing:1.5px}
+.topbar .titulo-top{font-size:.95rem;font-weight:700;color:var(--azul-oscuro);margin-left:6px;flex:1}
+[data-theme="dark"] .topbar .titulo-top{color:#dbe9fb}
+.topbar .acciones{display:flex;align-items:center;gap:10px}
+.btn-icono{width:44px;height:44px;border-radius:50%;border:2px solid var(--gris-linea);background:var(--blanco);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:var(--transicion);color:var(--azul-husi)}
+.btn-icono:hover{background:var(--azul-claro);transform:translateY(-2px)}
+.btn-menu{display:none}
+@media(max-width:960px){.topbar .titulo-top{display:none}.btn-menu{display:flex}}
+nav.sidebar{position:fixed;top:72px;left:0;bottom:0;width:290px;z-index:1400;background:var(--blanco);border-right:1px solid var(--gris-linea);overflow-y:auto;padding:18px 0 60px;transition:transform var(--transicion),background var(--transicion)}
+nav.sidebar h4{font-size:.72rem;text-transform:uppercase;letter-spacing:1.4px;color:var(--gris-suave);padding:14px 24px 6px}
+.sidebar-logo{margin:8px 15px 10px;background:#fff;border-radius:12px;padding:12px;box-shadow:0 2px 10px rgba(6,58,122,.12)}
+.sidebar-logo img{width:100%;height:auto;display:block}
+.logo-top-img{height:66px}
+@media(max-width:960px){.logo-top-img{height:38px}}
+nav.sidebar a{display:flex;align-items:center;gap:12px;padding:10px 24px;color:var(--gris-texto);font-size:.9rem;font-weight:600;border-left:4px solid transparent;transition:var(--transicion)}
+nav.sidebar a:hover{background:var(--azul-claro);border-left-color:var(--azul-medio)}
+nav.sidebar a.activo{background:var(--azul-claro);border-left-color:var(--azul-husi);color:var(--azul-husi)}
+nav.sidebar a .num{width:26px;height:26px;flex:none;border-radius:50%;background:var(--azul-claro);color:var(--azul-husi);font-size:.72rem;font-weight:800;display:flex;align-items:center;justify-content:center}
+nav.sidebar a.activo .num{background:var(--azul-husi);color:#fff}
+.overlay-menu{position:fixed;inset:0;background:rgba(6,42,92,.5);z-index:1390;opacity:0;visibility:hidden;transition:var(--transicion)}
+@media(max-width:960px){nav.sidebar{transform:translateX(-100%);box-shadow:var(--sombra-fuerte)}nav.sidebar.abierto{transform:translateX(0)}.overlay-menu.visible{opacity:1;visibility:visible}}
+main{margin-left:290px;margin-top:72px;transition:margin var(--transicion)}
+@media(max-width:960px){main{margin-left:0}}
+.contenedor{max-width:1080px;margin:0 auto;padding:0 22px}
+section.bloque{padding:58px 0;border-bottom:1px solid var(--gris-linea)}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--azul-claro);color:var(--azul-husi);font-size:.78rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:7px 16px;border-radius:40px;margin-bottom:16px}
+section.bloque > .contenedor > h2{font-size:2rem;margin-bottom:10px}
+.subtitulo{font-size:1.12rem;color:var(--gris-suave);max-width:780px;margin-bottom:32px}
+.hero{background:linear-gradient(135deg,var(--azul-husi),var(--azul-profundo));color:#fff;padding:66px 0 70px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-140px;top:-140px;width:440px;height:440px;background:radial-gradient(circle,rgba(255,255,255,.12),transparent 70%);border-radius:50%}
+.hero .contenedor{position:relative;z-index:2}
+.hero .eyebrow{background:rgba(255,255,255,.16);color:#fff}
+.hero h1{color:#fff;font-size:2.5rem;max-width:840px;margin-bottom:18px}
+.hero p.lead{font-size:1.22rem;color:#e3edfb;max-width:740px;margin-bottom:26px}
+.hero .btn-hero{display:inline-flex;align-items:center;gap:10px;background:#fff;color:var(--azul-husi);padding:14px 30px;border-radius:40px;font-weight:800;font-size:1.05rem;transition:var(--transicion);border:none;cursor:pointer}
+.hero .btn-hero:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(0,0,0,.25)}
+.accesos{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:34px}
+@media(max-width:860px){.accesos{grid-template-columns:repeat(2,1fr)}}
+.acceso{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.24);border-radius:14px;padding:14px;text-align:center;color:#fff;font-weight:700;font-size:.9rem;cursor:pointer;transition:var(--transicion);display:flex;flex-direction:column;align-items:center;gap:8px}
+.acceso:hover{background:rgba(255,255,255,.22);transform:translateY(-3px)}
+.acceso svg{width:30px;height:30px}
+@media(max-width:600px){.hero h1{font-size:1.8rem}.hero p.lead{font-size:1.05rem}}
+.grid{display:grid;gap:22px}
+.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:860px){.g2,.g3,.g4{grid-template-columns:1fr}}
+@media(min-width:601px) and (max-width:860px){.g3,.g4{grid-template-columns:repeat(2,1fr)}}
+.card{background:var(--tarjeta);border-radius:var(--radio);box-shadow:var(--sombra);padding:26px;transition:var(--transicion);border:1px solid var(--gris-linea)}
+.card:hover{box-shadow:var(--sombra-fuerte);transform:translateY(-4px)}
+.card .icono-caja{width:64px;height:64px;border-radius:16px;background:var(--azul-claro);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.card h3{font-size:1.2rem;margin-bottom:8px}.card h4{font-size:1.05rem;margin-bottom:6px}
+.card p{color:var(--gris-suave);font-size:.96rem;margin-bottom:0}
+.uso-card{text-align:center}.uso-card .icono-caja{margin:0 auto 14px}
+.alerta{border-radius:var(--radio-sm);padding:20px 22px;margin:22px 0;display:flex;gap:16px;align-items:flex-start;border-left:6px solid}
+.alerta .ico{flex:none;width:40px;height:40px}
+.alerta h4{margin-bottom:4px;font-size:1.05rem}.alerta p{margin-bottom:0;font-size:.96rem}
+.alerta.peligro{background:var(--rojo-claro);border-left-color:var(--rojo)}.alerta.peligro h4{color:var(--rojo)}
+.alerta.aviso{background:var(--naranja-claro);border-left-color:var(--naranja)}.alerta.aviso h4{color:#b5670a}
+.alerta.ok{background:var(--verde-claro);border-left-color:var(--verde)}.alerta.ok h4{color:var(--verde)}
+.alerta.info{background:var(--azul-claro);border-left-color:var(--azul-medio)}.alerta.info h4{color:var(--azul-husi)}
+/* Medidor INR */
+.inr-wrap{background:var(--tarjeta);border:1px solid var(--gris-linea);border-radius:var(--radio);box-shadow:var(--sombra);padding:28px;text-align:center;max-width:600px;margin:0 auto}
+.inr-valor{font-size:2.6rem;font-weight:900;color:var(--azul-husi);margin:6px 0}
+.inr-etq{font-weight:800;font-size:1.05rem;margin-bottom:14px}
+.inr-controles{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.inr-btn{border:2px solid var(--gris-linea);background:var(--tarjeta);color:var(--gris-texto);border-radius:40px;padding:10px 18px;font-weight:700;cursor:pointer;font-family:var(--fuente);transition:var(--transicion)}
+.inr-btn:hover{border-color:var(--azul-medio);background:var(--azul-claro)}
+.inr-btn.activo{background:var(--azul-husi);color:#fff;border-color:var(--azul-husi)}
+/* Semáforo nutricional */
+.semaforo{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:16px}
+@media(max-width:820px){.semaforo{grid-template-columns:1fr}}
+.sem-col{border-radius:var(--radio);overflow:hidden;box-shadow:var(--sombra);border:1px solid var(--gris-linea);background:var(--tarjeta)}
+.sem-head{padding:16px 18px;color:#fff;font-weight:800;display:flex;align-items:center;gap:10px}
+.sem-verde .sem-head{background:var(--verde)}.sem-amarillo .sem-head{background:var(--amarillo)}.sem-rojo .sem-head{background:var(--rojo)}
+.sem-body{padding:16px 18px}
+.sem-body ul{list-style:none}
+.sem-body li{padding:6px 0 6px 26px;position:relative;font-size:.95rem}
+.sem-body li::before{content:"";position:absolute;left:0;top:12px;width:12px;height:12px;border-radius:50%}
+.sem-verde li::before{background:var(--verde)}.sem-amarillo li::before{background:var(--amarillo)}.sem-rojo li::before{background:var(--rojo)}
+.food-chip{display:inline-flex;align-items:center;gap:6px;background:var(--azul-muy-claro);border:1px solid var(--gris-linea);border-radius:30px;padding:6px 12px;margin:4px 3px;font-size:.86rem;font-weight:600}
+/* Flow / algoritmo */
+.flow{display:flex;flex-direction:column;gap:0;max-width:660px;margin:0 auto}
+.flow-nodo{display:flex;gap:16px;position:relative;padding-bottom:22px}
+.flow-nodo:not(:last-child)::before{content:"";position:absolute;left:22px;top:46px;bottom:0;width:3px;background:var(--gris-linea)}
+.flow-ico{width:46px;height:46px;flex:none;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;z-index:2}
+.flow-cont{background:var(--tarjeta);border:1px solid var(--gris-linea);border-radius:14px;padding:14px 18px;flex:1;box-shadow:var(--sombra)}
+.flow-cont h4{font-size:1.02rem;margin-bottom:3px}.flow-cont p{margin:0;font-size:.93rem;color:var(--gris-suave)}
+/* Pasos numerados */
+.pasos-num{display:grid;gap:16px}
+.paso-n{display:flex;gap:16px;background:var(--tarjeta);border:1px solid var(--gris-linea);border-radius:14px;padding:16px 18px;box-shadow:var(--sombra);align-items:flex-start}
+.paso-n .n{width:40px;height:40px;flex:none;border-radius:50%;background:var(--azul-husi);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center}
+.paso-n h4{margin-bottom:2px}.paso-n p{margin:0;color:var(--gris-suave);font-size:.95rem}
+/* Interacciones */
+.inter-card{background:var(--tarjeta);border:1px solid var(--gris-linea);border-left:6px solid var(--naranja);border-radius:14px;padding:18px 20px;box-shadow:var(--sombra);transition:var(--transicion)}
+.inter-card:hover{transform:translateY(-4px);box-shadow:var(--sombra-fuerte)}
+.inter-card h4{color:#b5670a;font-size:1.02rem;margin-bottom:4px}
+.inter-card p{margin:0;font-size:.9rem;color:var(--gris-suave)}
+.inter-card.sangra{border-left-color:var(--rojo)}.inter-card.sangra h4{color:var(--rojo)}
+/* Urgencias */
+.urg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:860px){.urg-grid{grid-template-columns:1fr}}
+@media(min-width:601px) and (max-width:860px){.urg-grid{grid-template-columns:repeat(2,1fr)}}
+.urg-card{background:var(--rojo-claro);border:2px solid var(--rojo);border-radius:var(--radio);padding:20px;text-align:center;transition:var(--transicion)}
+.urg-card:hover{transform:scale(1.03)}
+.urg-card .ilus{width:60px;height:60px;margin:0 auto 12px}
+.urg-card h4{color:var(--rojo);font-size:1.02rem;margin-bottom:4px}.urg-card p{color:var(--gris-suave);font-size:.88rem;margin-bottom:0}
+.banner-urg{background:linear-gradient(135deg,var(--rojo),#a52222);color:#fff;border-radius:var(--radio);padding:26px 30px;display:flex;align-items:center;gap:20px;margin-bottom:28px;flex-wrap:wrap}
+.banner-urg .tel{font-size:2rem;font-weight:900;letter-spacing:1px}.banner-urg h3{color:#fff;margin-bottom:2px}
+/* Acordeón */
+.acordeon{display:flex;flex-direction:column;gap:12px}
+.acc-item{background:var(--tarjeta);border:1px solid var(--gris-linea);border-radius:14px;overflow:hidden;box-shadow:var(--sombra)}
+.acc-head{width:100%;text-align:left;padding:17px 22px;background:none;border:none;cursor:pointer;font-size:1.02rem;font-weight:700;color:var(--azul-oscuro);display:flex;justify-content:space-between;align-items:center;gap:14px;font-family:var(--fuente);transition:var(--transicion)}
+[data-theme="dark"] .acc-head{color:#dbe9fb}
+.acc-head:hover{background:var(--azul-claro)}
+.acc-head .mas{flex:none;width:30px;height:30px;border-radius:50%;background:var(--azul-claro);color:var(--azul-husi);display:flex;align-items:center;justify-content:center;font-size:1.3rem;transition:var(--transicion)}
+.acc-item.abierto .acc-head .mas{transform:rotate(45deg);background:var(--azul-husi);color:#fff}
+.acc-body{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.acc-body .inner{padding:0 22px 18px;color:var(--gris-suave);font-size:.96rem}
+/* Mitos */
+.mito-card{background:var(--tarjeta);border-radius:var(--radio);box-shadow:var(--sombra);border:1px solid var(--gris-linea);overflow:hidden;transition:var(--transicion)}
+.mito-card:hover{box-shadow:var(--sombra-fuerte);transform:translateY(-4px)}
+.mito-card .mito-h{background:var(--rojo-claro);padding:16px 20px;display:flex;gap:10px;align-items:flex-start}
+.mito-card .real-h{padding:16px 20px;display:flex;gap:10px;align-items:flex-start}
+.mito-card .etq{font-weight:900;font-size:.72rem;letter-spacing:1px;padding:3px 10px;border-radius:20px;flex:none}
+.mito-card .etq.m{background:var(--rojo);color:#fff}.mito-card .etq.r{background:var(--verde);color:#fff}
+.mito-card .mito-h p,.mito-card .real-h p{margin:0;font-size:.95rem;color:var(--gris-texto)}
+/* Quiz */
+.quiz-box{background:var(--tarjeta);border-radius:var(--radio);box-shadow:var(--sombra-fuerte);border:1px solid var(--gris-linea);padding:30px;max-width:760px;margin:0 auto}
+.quiz-progreso{height:8px;background:var(--gris-linea);border-radius:10px;overflow:hidden;margin-bottom:20px}
+.quiz-progreso span{display:block;height:100%;background:linear-gradient(90deg,var(--azul-medio),var(--verde));width:0;transition:width .4s}
+.quiz-conteo{text-align:center;color:var(--gris-suave);font-weight:700;margin-bottom:8px;font-size:.9rem}
+.quiz-pregunta{font-size:1.22rem;font-weight:800;color:var(--azul-oscuro);margin-bottom:20px;text-align:center}
+[data-theme="dark"] .quiz-pregunta{color:#dbe9fb}
+.quiz-opciones{display:flex;flex-direction:column;gap:12px}
+.quiz-op{padding:15px 20px;border:2px solid var(--gris-linea);border-radius:14px;cursor:pointer;font-size:1rem;font-weight:600;transition:var(--transicion);background:var(--tarjeta);text-align:left;font-family:var(--fuente);color:var(--gris-texto)}
+.quiz-op:hover:not(.bloq){border-color:var(--azul-medio);background:var(--azul-claro)}
+.quiz-op.correcta{border-color:var(--verde);background:var(--verde-claro);color:var(--verde)}
+.quiz-op.incorrecta{border-color:var(--rojo);background:var(--rojo-claro);color:var(--rojo)}
+.quiz-feedback{margin-top:18px;padding:16px 20px;border-radius:14px;font-size:.95rem;display:none}
+.quiz-feedback.ok{background:var(--verde-claro);color:var(--verde);display:block;border-left:5px solid var(--verde)}
+.quiz-feedback.mal{background:var(--rojo-claro);color:var(--rojo);display:block;border-left:5px solid var(--rojo)}
+.quiz-nav{display:flex;justify-content:space-between;margin-top:22px}
+.btn{background:var(--azul-husi);color:#fff;border:none;padding:13px 28px;border-radius:40px;font-weight:800;font-size:1rem;cursor:pointer;transition:var(--transicion);font-family:var(--fuente)}
+.btn:hover{background:var(--azul-oscuro);transform:translateY(-2px)}
+.btn:disabled{opacity:.4;cursor:not-allowed;transform:none}
+.quiz-resultado{text-align:center;display:none}
+.quiz-resultado .marca{font-size:3.2rem;font-weight:900;color:var(--azul-husi);margin:10px 0}
+.medidor{width:150px;height:150px;margin:0 auto 10px}
+/* Tooltip */
+.termino{border-bottom:2px dotted var(--azul-medio);cursor:help;color:var(--azul-husi);font-weight:700;position:relative}
+.termino .tip{position:absolute;bottom:135%;left:50%;transform:translateX(-50%) translateY(6px);background:var(--azul-profundo);color:#fff;padding:12px 16px;border-radius:12px;font-size:.85rem;font-weight:500;width:250px;opacity:0;visibility:hidden;transition:var(--transicion);z-index:100;box-shadow:var(--sombra-fuerte);line-height:1.5;text-align:left}
+.termino .tip::after{content:"";position:absolute;top:100%;left:50%;transform:translateX(-50%);border:8px solid transparent;border-top-color:var(--azul-profundo)}
+.termino:hover .tip{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+@media(max-width:600px){.termino .tip{width:200px}}
+/* Checklist */
+.checklist{background:var(--tarjeta);border:1px solid var(--gris-linea);border-radius:var(--radio);box-shadow:var(--sombra);padding:10px 6px}
+.check-item{display:flex;align-items:center;gap:14px;padding:12px 16px;border-bottom:1px solid var(--gris-linea);cursor:pointer;transition:var(--transicion)}
+.check-item:last-child{border-bottom:none}
+.check-item:hover{background:var(--azul-muy-claro)}
+.check-box{width:26px;height:26px;flex:none;border:2px solid var(--azul-husi);border-radius:8px;display:flex;align-items:center;justify-content:center;transition:var(--transicion);color:transparent;font-weight:900}
+.check-item.hecho .check-box{background:var(--verde);border-color:var(--verde);color:#fff}
+.check-item.hecho span{text-decoration:line-through;color:var(--gris-suave)}
+/* Resumen */
+.resumen-info{background:linear-gradient(135deg,var(--azul-husi),var(--azul-profundo));color:#fff;border-radius:var(--radio);padding:34px;box-shadow:var(--sombra-fuerte)}
+.resumen-info h3{color:#fff}
+.resumen-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:20px}
+@media(max-width:700px){.resumen-grid{grid-template-columns:1fr}}
+.resumen-item{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);border-radius:14px;padding:15px 18px;display:flex;gap:12px;align-items:flex-start}
+.resumen-item b{display:block;margin-bottom:2px;font-size:1rem}.resumen-item span{font-size:.9rem;color:#dce8fa}
+.flotantes{position:fixed;right:22px;bottom:24px;z-index:1200;display:flex;flex-direction:column;gap:12px}
+.fab{width:56px;height:56px;border-radius:50%;border:none;cursor:pointer;box-shadow:var(--sombra-fuerte);display:flex;align-items:center;justify-content:center;transition:var(--transicion);color:#fff}
+.fab:hover{transform:translateY(-4px) scale(1.05)}
+.fab.arriba{background:var(--azul-husi);opacity:0;visibility:hidden}.fab.arriba.visible{opacity:1;visibility:visible}
+.fab.urgencia{background:var(--rojo);position:relative}
+.fab.urgencia::after{content:"";position:absolute;width:56px;height:56px;border-radius:50%;border:3px solid var(--rojo);animation:pulso 1.8s infinite}
+@keyframes pulso{0%{transform:scale(1);opacity:.7}100%{transform:scale(1.5);opacity:0}}
+footer.pie{background:var(--azul-profundo);color:#cfe0f5;padding:44px 0 30px;margin-left:290px}
+@media(max-width:960px){footer.pie{margin-left:0}}
+footer.pie .contenedor{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}
+@media(max-width:760px){footer.pie .contenedor{grid-template-columns:1fr}}
+footer.pie h4{color:#fff;font-size:1rem;margin-bottom:12px}
+footer.pie a{color:#cfe0f5;font-size:.9rem;display:block;padding:3px 0}
+footer.pie a:hover{color:#fff}
+footer.pie .fuentes{font-size:.82rem;color:#9db8db;line-height:1.7}
+footer.pie .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.15);margin-top:24px;padding-top:20px;font-size:.82rem;color:#9db8db;text-align:center}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+@keyframes flujo{0%{stroke-dashoffset:200}100%{stroke-dashoffset:0}}
+.sangre-fluye{stroke-dasharray:14 10;animation:flujo 3s linear infinite}
+.vaso-demo{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:10px}
+@media(max-width:700px){.vaso-demo{grid-template-columns:1fr}}
+.vaso-caja{background:var(--tarjeta);border:1px solid var(--gris-linea);border-radius:var(--radio);padding:22px;text-align:center;box-shadow:var(--sombra)}
+.vaso-caja.malo{border-top:6px solid var(--rojo)}.vaso-caja.bueno{border-top:6px solid var(--verde)}
+.vaso-caja h4{margin-top:10px}.vaso-caja.malo h4{color:var(--rojo)}.vaso-caja.bueno h4{color:var(--verde)}
+.pill{display:inline-block;background:var(--azul-claro);color:var(--azul-husi);font-weight:700;font-size:.8rem;padding:4px 12px;border-radius:20px;margin:2px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--naranja);outline-offset:2px}
+.skip{position:absolute;left:-999px;top:0;background:var(--azul-husi);color:#fff;padding:10px 16px;z-index:3000}
+.skip:focus{left:8px;top:8px}
+@media print{.topbar,nav.sidebar,.flotantes,.overlay-menu{display:none}main,footer.pie{margin-left:0}.reveal{opacity:1;transform:none}}
+
+/* ==== Enlace de regreso al portal (agregado) ==== */
+.hvp-back{color:var(--azul-husi)}
+.hvp-back:focus-visible{outline:3px solid var(--azul-husi);outline-offset:2px}
+.hvp-sidebar-link{font-weight:800!important;color:var(--azul-husi)!important;border-bottom:1px solid var(--gris-linea);margin-bottom:6px;padding-bottom:14px!important}
+.hvp-footer-link{display:block;text-align:center;color:#fff;font-weight:700;text-decoration:underline;grid-column:1/-1;margin-top:14px;padding-top:16px;border-top:1px solid rgba(255,255,255,.15)}
+.hvp-footer-link:hover{color:#cfe0f5}
+</style>
+</head>
+<body data-theme="light">
+<a href="#inicio" class="skip">Saltar al contenido</a>
+<div id="barra-progreso"></div>
+
+<header class="topbar">
+  <button class="btn-icono btn-menu" id="btnMenu" aria-label="Abrir menú">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+  </button>
+  <div class="logo-husi" onclick="irA('inicio')">
+    <img src="logo-husi.png" alt="Hospital Universitario San Ignacio" class="logo-top-img" style="width:auto;display:block" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+    <div class="logo-fallback" style="display:none;align-items:center;gap:12px">
+      <svg width="50" height="48" viewBox="0 0 210 200" aria-label="Logo Hospital Universitario San Ignacio">
+        <g fill="#0a4c9c" stroke="#0a4c9c">
+          <path d="M6 92 h60 M16 108 h50 M28 124 h38" fill="none" stroke-width="9" stroke-linecap="round"/>
+          <path d="M144 92 h60 M144 108 h50 M144 124 h38" fill="none" stroke-width="9" stroke-linecap="round"/>
+          <circle cx="105" cy="78" r="56" fill="none" stroke-width="13"/>
+          <circle cx="105" cy="50" r="12"/>
+          <rect x="63" y="64" width="84" height="18" rx="9"/>
+          <path d="M92 82 L72 170 M118 82 L138 170" fill="none" stroke-width="13" stroke-linecap="round"/>
+          <path d="M83 128 h44" fill="none" stroke-width="11" stroke-linecap="round"/>
+          <path d="M64 170 h22 M124 170 h22" fill="none" stroke-width="11" stroke-linecap="round"/>
+        </g>
+      </svg>
+      <div class="marca">
+        <b>HOSPITAL UNIVERSITARIO SAN IGNACIO</b>
+        <span>CIENCIA Y TECNOLOGÍA CON PROYECCIÓN SOCIAL</span>
+      </div>
+    </div>
+  </div>
+  <div class="titulo-top">Guía para pacientes que toman Warfarina</div>
+  <div class="acciones">
+    <a href="index.html" class="btn-icono hvp-back" aria-label="Volver a Guías para Pacientes" title="Volver a Guías para Pacientes">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    </a>
+    <button class="btn-icono" id="btnTema" aria-label="Cambiar modo oscuro" title="Modo oscuro / claro">
+      <svg id="icoTema" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+    </button>
+  </div>
+</header>
+
+<nav class="sidebar" id="sidebar" aria-label="Menú de secciones">
+  <div class="sidebar-logo"><img src="logo-husi.png" alt="Hospital Universitario San Ignacio"></div>
+  <a href="index.html" class="hvp-sidebar-link" aria-label="Volver a Guías para Pacientes">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    ← Volver a Guías para Pacientes
+  </a>
+  <h4>Contenido</h4>
+  <a href="#inicio" onclick="cerrarMenu()"><span class="num">◆</span> Inicio</a>
+  <a href="#s1" onclick="cerrarMenu()"><span class="num">1</span> ¿Qué es la warfarina?</a>
+  <a href="#s2" onclick="cerrarMenu()"><span class="num">2</span> ¿Para qué sirve?</a>
+  <a href="#s3" onclick="cerrarMenu()"><span class="num">3</span> ¿Qué es el INR?</a>
+  <a href="#s4" onclick="cerrarMenu()"><span class="num">4</span> Cómo tomarla</a>
+  <a href="#s5" onclick="cerrarMenu()"><span class="num">5</span> Si olvida una dosis</a>
+  <a href="#s6" onclick="cerrarMenu()"><span class="num">6</span> Vitamina K y alimentación</a>
+  <a href="#s7" onclick="cerrarMenu()"><span class="num">7</span> Alcohol</a>
+  <a href="#s8" onclick="cerrarMenu()"><span class="num">8</span> Interacciones</a>
+  <a href="#s9" onclick="cerrarMenu()"><span class="num">9</span> Procedimientos médicos</a>
+  <a href="#s10" onclick="cerrarMenu()"><span class="num">10</span> Signos de alarma</a>
+  <a href="#s11" onclick="cerrarMenu()"><span class="num">11</span> Viajes</a>
+  <a href="#s12" onclick="cerrarMenu()"><span class="num">12</span> Actividad física</a>
+  <a href="#s13" onclick="cerrarMenu()"><span class="num">13</span> Embarazo</a>
+  <a href="#s14" onclick="cerrarMenu()"><span class="num">14</span> Preguntas frecuentes</a>
+  <a href="#s15" onclick="cerrarMenu()"><span class="num">15</span> Mitos y realidades</a>
+  <a href="#s16" onclick="cerrarMenu()"><span class="num">16</span> Autoevaluación</a>
+  <a href="#s17" onclick="cerrarMenu()"><span class="num">17</span> Resumen y contacto</a>
+</nav>
+<div class="overlay-menu" id="overlayMenu" onclick="cerrarMenu()"></div>
+
+<main id="contenido">
+<section class="hero" id="inicio">
+  <div class="contenedor">
+    <span class="eyebrow">Educación para pacientes · HUSI</span>
+    <h1>Guía para pacientes que toman Warfarina</h1>
+    <p class="lead">La warfarina protege tu sangre de coágulos peligrosos. Aquí aprenderás, con palabras simples y muchos dibujos, a usarla de forma segura y a entender tu INR.</p>
+    <button class="btn-hero" onclick="irA('s1')">Comenzar la guía
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </button>
+    <div class="accesos">
+      <div class="acceso" onclick="irA('s3')"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/><circle cx="12" cy="12" r="5"/></svg>¿Qué es el INR?</div>
+      <div class="acceso" onclick="irA('s6')"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 2v20M7 8h4a4 4 0 0 0 0-8H7"/></svg>Vitamina K</div>
+      <div class="acceso" onclick="irA('s8')"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="2"/><path d="M12 8v12"/></svg>Interacciones</div>
+      <div class="acceso" onclick="irA('s10')"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg>Signos de alarma</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SECCIÓN 1 ===================== -->
+<section class="bloque" id="s1">
+  <div class="contenedor">
+    <span class="eyebrow reveal">Sección 1</span>
+    <h2 class="reveal">¿Qué es la warfarina?</h2>
+    <p class="subtitulo reveal">Es una pastilla que hace tu sangre más "líquida" para que no se formen coágulos peligrosos. Se toma por la boca, una vez al día.</p>
+
+    <div class="grid g2">
+      <div class="card reveal">
+        <div class="icono-caja"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#0a4c9c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.5a5.5 5.5 0 0 0 0-7.9z"/></svg></div>
+        <h3>¿Cómo evita los coágulos?</h3>
+        <p>Tu cuerpo usa la <span class="termino">vitamina K<span class="tip">La vitamina K está en muchos alimentos, sobre todo en las verduras de hoja verde. El cuerpo la usa para fabricar los "ayudantes" que forman coágulos.</span></span> para fabricar unos "ayudantes" que hacen coagular la sangre. La warfarina frena ese proceso, así se forman menos coágulos.</p>
+      </div>
+      <div class="card reveal">
+        <div class="icono-caja"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#0a4c9c" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <h3>¿Por qué tarda unos días en actuar?</h3>
+        <p>Los "ayudantes" que ya están en la sangre siguen trabajando un tiempo. Por eso la warfarina necesita <b>varios días</b> para alcanzar su efecto. Al inicio, tu médico puede acompañarla con una inyección.</p>
+      </div>
+    </div>
+
+    <h3 class="reveal" style="margin-top:30px">Así trabaja dentro de tu sangre</h3>
+    <div class="vaso-demo">
+      <div class="vaso-caja malo reveal">
+        <svg viewBox="0 0 220 90" width="100%" height="90" aria-label="Vaso con coágulo">
+          <rect x="5" y="30" width="210" height="30" rx="15" fill="#fdeaea" stroke="#d93a3a" stroke-width="3"/>
+          <circle cx="60" cy="45" r="7" fill="#d93a3a"/><circle cx="72" cy="42" r="6" fill="#b52a2a"/><circle cx="66" cy="50" r="6" fill="#e05555"/><circle cx="55" cy="50" r="5" fill="#b52a2a"/>
+          <circle cx="150" cy="45" r="4" fill="#f0a0a0"/><circle cx="175" cy="48" r="4" fill="#f0a0a0"/>
+        </svg>
+        <h4>Sin tratamiento</h4>
+        <p style="color:var(--gris-suave);font-size:.9rem;margin:0">Los "ayudantes" forman un coágulo que tapa el vaso.</p>
+      </div>
+      <div class="vaso-caja bueno reveal">
+        <svg viewBox="0 0 220 90" width="100%" height="90" aria-label="Vaso limpio">
+          <rect x="5" y="30" width="210" height="30" rx="15" fill="#e5f6ee" stroke="#1f9d6b" stroke-width="3"/>
+          <path d="M15 45 H205" stroke="#1f9d6b" stroke-width="4" fill="none" class="sangre-fluye" stroke-linecap="round"/>
+          <circle cx="45" cy="45" r="4" fill="#7fbfa2"/><circle cx="95" cy="45" r="4" fill="#7fbfa2"/><circle cx="145" cy="45" r="4" fill="#7fbfa2"/><circle cx="185" cy="45" r="4" fill="#7fbfa2"/>
+        </svg>
+        <h4>Con warfarina</h4>
+        <p style="color:var(--gris-suave);font-size:.9rem;margin:0">Hay menos "ayudantes", la sangre corre libre.</p>
+      </div>
+    </div>
+
+    <div class="alerta peligro reveal">
+      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="#d93a3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6M9 9l6 6"/></svg>
+      <div><h4>Nunca la suspendas por tu cuenta</h4><p>Aunque te sientas bien, dejar la warfarina de repente puede causar un coágulo grave (como un derrame). Solo tu médico decide cuándo cambiarla o suspenderla.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SECCIÓN 2 ===================== -->
+<section class="bloque" id="s2" style="background:var(--azul-muy-claro)">
+  <div class="contenedor">
+    <span class="eyebrow reveal">Sección 2</span>
+    <h2 class="reveal">¿Para qué enfermedades sirve?</h2>
+    <p class="subtitulo reveal">Tu médico pudo recetarte warfarina por alguna de estas razones. Todas buscan lo mismo: evitar coágulos.</p>
+    <div class="grid g3">
+      <div class="card uso-card reveal">
+        <div class="icono-caja"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#0a4c9c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-6 4 12 2-6h6"/></svg></div>
+        <h4>Fibrilación auricular</h4>
+        <p>El corazón late irregular y puede soltar coágulos hacia el cerebro.</p>
+      </div>
+      <div class="card uso-card reveal">
+        <div class="icono-caja"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#0a4c9c" stroke-width="2" stroke-linecap="round"><path d="M6 2v6a6 6 0 0 0 12 0V2"/><path d="M8 22c0-4 8-4 8-8"/></svg></div>
+        <h4>Trombosis venosa profunda</h4>
+        <p>Coágulo en una vena, casi siempre de la pierna.</p>
+      </div>
+      <div class="card uso-card reveal">
+        <div class="icono-caja"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#0a4c9c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c1 3 4 4 4 8a4 4 0 0 1-8 0c0-4 3-5 4-8z"/><path d="M12 14v6M9 20h6"/></svg></div>
+        <h4>Embolia pulmonar</h4>
+        <p>Un coágulo que viaja y se atasca en el pulmón.</p>
+      </div>
+      <div class="card uso-card reveal">
+        <div class="icono-caja"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#0a4c9c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 1 4 4v3H8V6a4 4 0 0 1 4-4z"/><path d="M8 9h8v4a4 4 0 0 1-8 0z"/><path d="M12 17v5"/></svg></div>
+        <h4>Válvula mecánica del corazón</h4>
+        <p>Las prótesis de metal necesitan warfarina para no formar coágulos.</p>
+      </div>
+      <div class="card uso-card reveal">
+        <div class="icono-caja"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#0a4c9c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 6 6 .5-4.5 4 1.5 6L12 15l-6 3.5 1.5-6L3 8.5 9 8z"/></svg></div>
+        <h4>Algunas trombofilias</h4>
+        <p>Enfermedades de la sangre que hacen que se formen coágulos con más facilidad.</p>
+      </div>
+      <div class="card uso-card reveal" style="display:flex;flex-direction:column;justify-content:center;background:var(--azul-claro)">
+        <h4 style="color:var(--azul-husi)">La válvula mecánica es especial</h4>
+        <p>Estos pacientes solo pueden usar warfarina, no otros anticoagulantes. Por eso el control es tan importante.</p>
+      </div>
+    </div>
+    <div class="alerta ok reveal">
+      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="#1f9d6b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+      <div><h4>Recuerda</h4><p>Sea cual sea tu caso, lo importante es tomar la warfarina tal como te la indicó tu médico y hacerte los controles de INR.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SECCIÓN 3 ===================== -->
+<section class="bloque" id="s3">
+  <div class="contenedor">
+    <span class="eyebrow reveal">Sección 3</span>
+    <h2 class="reveal">¿Qué es el INR?</h2>
+    <p class="subtitulo reveal">El INR es un número que mide qué tan "líquida" está tu sangre. Es la forma de saber si tu dosis de warfarina es la correcta.</p>
+
+    <div class="grid g3">
+      <div class="card reveal">
+        <div class="icono-caja"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#0a4c9c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2h6M10 2v5l-4 9a3 3 0 0 0 3 4h6a3 3 0 0 0 3-4l-4-9V2"/></svg></div>
+        <h4>¿Qué significa?</h4>
+        <p>Se mide con un examen de sangre. Un INR de 1 es sangre "normal". Mientras más alto el número, más líquida está la sangre.</p>
+      </div>
+      <div class="card reveal">
+        <div class="icono-caja"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#0a4c9c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/><circle cx="12" cy="12" r="5"/></svg></div>
+        <h4>¿Para qué sirve?</h4>
+        <p>Le dice a tu médico si la dosis está bien, o si hay que subirla o bajarla. Por eso ajustar la warfarina depende del INR.</p>
+      </div>
+      <div class="card reveal">
+        <div class="icono-caja"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#0a4c9c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M8 2v4M16 2v4M3 10h18"/></svg></div>
+        <h4>¿Por qué controlarlo seguido?</h4>
+        <p>El INR cambia con la comida, otros medicamentos o enfermedades. Por eso necesitas controles periódicos: a veces cada semana, a veces cada mes.</p>
+      </div>
+    </div>
+
+    <h3 class="reveal" style="margin-top:30px">Medidor de INR</h3>
+    <p class="reveal" style="color:var(--gris-suave);margin-top:-6px">Toca cada botón para ver qué significa cada zona. El rango ideal para la mayoría de pacientes es entre <b>2,0 y 3,0</b> (tu médico te dirá el tuyo).</p>
+    <div class="inr-wrap reveal">
+      <svg viewBox="0 0 300 170" width="100%" style="max-width:420px" aria-label="Medidor de INR">
+        <path d="M30 150 A120 120 0 0 1 270 150" fill="none" stroke="#d93a3a" stroke-width="20" stroke-linecap="round"/>
+        <path d="M150 30 A120 120 0 0 1 270 150" fill="none" stroke="#e8a300" stroke-width="20"/>
+        <path d="M95 55 A120 120 0 0 1 205 55" fill="none" stroke="#1f9d6b" stroke-width="20"/>
+        <g id="aguja" style="transition:transform .6s cubic-bezier(.34,1.4,.6,1);transform-origin:150px 150px">
+          <line x1="150" y1="150" x2="150" y2="55" stroke="#0a4c9c" stroke-width="5" stroke-linecap="round"/>
+          <circle cx="150" cy="150" r="9" fill="#0a4c9c"/>
+        </g>
+        <text x="34" y="168" font-size="11" fill="#5b6b7b">bajo</text>
+        <text x="140" y="20" font-size="11" fill="#1f9d6b" font-weight="bold">ideal</text>
+        <text x="250" y="168" font-size="11" fill="#5b6b7b">alto</text>
+      </svg>
+      <div class="inr-valor" id="inrValor">2,5</div>
+      <div class="inr-etq" id="inrEtq" style="color:var(--verde)">Zona ideal (terapéutica)</div>
+      <p id="inrTexto" style="color:var(--gris-suave);margin:0">Tu sangre está protegida sin sangrar de más. ¡Aquí es donde quieres estar! Sigue igual tu dosis y tus controles.</p>
+      <div class="inr-controles">
+        <button class="inr-btn" onclick="setINR('bajo',this)">INR bajo (menos de 2)</button>
+        <button class="inr-btn activo" onclick="setINR('ideal',this)">INR ideal (2 a 3)</button>
+        <button class="inr-btn" onclick="setINR('alto',this)">INR alto (más de 3)</button>
+      </div>
+    </div>
+
+    <div class="grid g2" style="margin-top:24px">
+      <div class="alerta aviso reveal" style="margin:0">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="#e8820c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2s7 7 7 12a7 7 0 0 1-14 0c0-5 7-12 7-12z"/></svg>
+        <div><h4>Si el INR está bajo</h4><p>La sangre está muy espesa y hay más riesgo de coágulo. El médico puede subir un poco la dosis.</p></div>
+      </div>
+      <div class="alerta peligro reveal" style="margin:0">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="#d93a3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2s7 7 7 12a7 7 0 0 1-14 0c0-5 7-12 7-12z"/></svg>
+        <div><h4>Si el INR está alto</h4><p>La sangre está muy líquida y hay más riesgo de sangrado. El médico puede bajar la dosis. Vigila señales de sangrado.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SECCIÓN 4 ===================== -->
+<section class="bloque" id="s4" style="background:var(--azul-muy-claro)">
+  <div class="contenedor">
+    <span class="eyebrow reveal">Sección 4</span>
+    <h2 class="reveal">¿Cómo tomar la warfarina?</h2>
+    <p class="subtitulo reveal">Unas reglas sencillas hacen que tu tratamiento sea seguro y que tu INR se mantenga estable.</p>
+    <div class="pasos-num">
+      <div class="paso-n reveal"><div class="n">1</div><div><h4>Todos los días</h4><p>No te saltes ningún día. La protección necesita que la tomes siempre.</p></div></div>
+      <div class="paso-n reveal"><div class="n">2</div><div><h4>Siempre a la misma hora</h4><p>Elige una hora fija, por lo general en la <b>tarde o noche</b>. Así, si el médico cambia la dosis, alcanzas a hacerlo ese mismo día.</p></div></div>
+      <div class="paso-n reveal"><div class="n">3</div><div><h4>Con un vaso de agua</h4><p>Trágala con agua. Puede ser con o sin comida.</p></div></div>
+      <div class="paso-n reveal"><div class="n">4</div><div><h4>Nunca dupliques la dosis</h4><p>Si olvidaste una, no tomes dos juntas para compensar (mira la Sección 5).</p></div></div>
+      <div class="paso-n reveal"><div class="n">5</div><div><h4>Nunca la suspendas por tu cuenta</h4><p>Ni siquiera si te sientes bien o antes de un procedimiento. Consulta siempre.</p></div></div>
+    </div>
+
+    <h3 class="reveal" style="margin-top:30px">Cómo partir la warfarina</h3>
+    <div class="card reveal" style="display:flex;gap:20px;align-items:center;flex-wrap:wrap">
+      <svg width="120" height="90" viewBox="0 0 130 100" aria-label="Partir tableta con cortador" style="flex:none">
+        <circle cx="45" cy="50" r="26" fill="#e8f1fb" stroke="#0a4c9c" stroke-width="2.5"/>
+        <line x1="45" y1="26" x2="45" y2="74" stroke="#0a4c9c" stroke-width="2" stroke-dasharray="4 3"/>
+        <text x="45" y="55" font-size="12" fill="#0a4c9c" text-anchor="middle" font-weight="bold">5 mg</text>
+        <path d="M85 30 h30 v8 h-30z" fill="#bcd8f7" stroke="#0a4c9c" stroke-width="1.5"/>
+        <path d="M92 38 v18 M108 38 v18" stroke="#0a4c9c" stroke-width="2"/>
+        <path d="M88 56 h32 l-4 10 h-24z" fill="#e8f1fb" stroke="#0a4c9c" stroke-width="1.5"/>
+        <text x="100" y="86" font-size="9" fill="#5b6b7b" text-anchor="middle">cortador</text>
+      </svg>
+      <div style="flex:1;min-width:240px">
+        <p style="margin:0 0 8px">En Colombia la warfarina suele venir en tabletas de <b>5 mg</b>. Muchas veces el médico indica una dosis menor, así que hay que <b>partir la tableta</b>.</p>
+        <p style="margin:0;color:var(--gris-suave)">Usa un <b>cortador de pastillas</b> (se consigue en la farmacia) para partirla parejo por la mitad (2,5 mg) o en cuartos (1,25 mg), según te indiquen. Parte solo la que vas a tomar ese día y guarda el resto en su frasco.</p>
+      </div>
+    </div>
+
+    <div class="alerta info reveal">
+      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="#1565c0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l3-3 3 3 5-6"/></svg>
+      <div><h4>Tu dosis puede cambiar entre días</h4><p>Es normal que el médico indique, por ejemplo, "una tableta un día y media al día siguiente". Sigue exactamente ese plan semanal. Si te confunde, pide que te lo escriban y usa un pastillero.</p></div>
+    </div>
+    <div class="alerta peligro reveal">
+      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="#d93a3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6M9 9l6 6"/></svg>
+      <div><h4>No cambies la dosis tú mismo</h4><p>Cambiar cuánto tomas sin que lo indique el médico puede subir el riesgo de coágulo o de sangrado. Los cambios se hacen según tu INR.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SECCIÓN 5 ===================== -->
+<section class="bloque" id="s5">
+  <div class="contenedor">
+    <span class="eyebrow reveal">Sección 5</span>
+    <h2 class="reveal">¿Qué hago si olvido una dosis?</h2>
+    <p class="subtitulo reveal">Tranquilo, pasa. Sigue este pequeño mapa. La regla de oro: <b>nunca tomes dos dosis juntas</b>.</p>
+    <div class="flow">
+      <div class="flow-nodo reveal"><div class="flow-ico" style="background:var(--azul-husi)">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+      </div><div class="flow-cont"><h4>Primero: mira la hora</h4><p>¿Todavía es el mismo día en que debías tomarla?</p></div></div>
+      <div class="flow-nodo reveal"><div class="flow-ico" style="background:var(--verde)">✓</div><div class="flow-cont"><h4>Si lo recuerdas el mismo día</h4><p>Tómala apenas te acuerdes. Luego sigue con tu horario normal.</p></div></div>
+      <div class="flow-nodo reveal"><div class="flow-ico" style="background:var(--naranja)">!</div><div class="flow-cont"><h4>Si ya pasó al día siguiente</h4><p>Sáltate la dosis olvidada. Toma solo la que toca ese día. No tomes dos.</p></div></div>
+      <div class="flow-nodo reveal"><div class="flow-ico" style="background:var(--rojo)">✕</div><div class="flow-cont"><h4>Nunca dupliques la dosis</h4><p>Tomar el doble puede causar un sangrado peligroso. Jamás lo hagas.</p></div></div>
+      <div class="flow-nodo reveal"><div class="flow-ico" style="background:var(--azul-medio)">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.5-1.1a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/></svg>
+      </div><div class="flow-cont"><h4>Anótalo y avisa</h4><p>Marca en tu calendario que olvidaste una dosis y cuéntaselo a tu clínica en el próximo control, sobre todo si olvidaste varias.</p></div></div>
+    </div>
+    <div class="alerta info reveal">
+      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="#1565c0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.5-1.1a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/></svg>
+      <div><h4>¿Tienes dudas?</h4><p>Si olvidaste varias dosis o no sabes qué hacer, llama a tu clínica de anticoagulación antes de seguir.</p></div>
+    </div>
+  </div>
+</section>
+<!-- ===================== SECCIÓN 6 ===================== -->
+<section class="bloque" id="s6" style="background:var(--azul-muy-claro)">
+  <div class="contenedor">
+    <span class="eyebrow reveal">Sección 6</span>
+    <h2 class="reveal">Vitamina K y alimentación</h2>
+    <p class="subtitulo reveal">Esta es una de las secciones más importantes. La vitamina K está en muchos alimentos y afecta a la warfarina. La clave es una sola: <b>constancia</b>.</p>
+
+    <div class="alerta ok reveal">
+      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="#1f9d6b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+      <div><h4>No tienes que eliminar las verduras</h4><p>Las verduras verdes son sanas y <b>puedes comerlas</b>. Lo importante NO es dejarlas, sino <b>comer una cantidad parecida cada semana</b>. Si un día comes mucha y otro nada, tu INR sube y baja.</p></div>
+    </div>
+
+    <div class="grid g2 reveal">
+      <div class="card" style="display:flex;gap:16px;align-items:center">
+        <svg width="70" height="70" viewBox="0 0 80 80" aria-label="Verduras de hoja verde" style="flex:none"><path d="M40 12c-10 0-18 8-18 20 0 14 18 34 18 34s18-20 18-34c0-12-8-20-18-20z" fill="#e5f6ee" stroke="#1f9d6b" stroke-width="2.5"/><path d="M40 20v40M28 34c4 2 8 3 12 3M52 34c-4 2-8 3-12 3M30 48c4 2 6 3 10 3M50 48c-4 2-6 3-10 3" stroke="#1f9d6b" stroke-width="2" stroke-linecap="round"/></svg>
+        <div><h4>¿Por qué pasa esto?</h4><p style="margin:0">La vitamina K de las verduras es "lo contrario" de la warfarina. Si comes mucha de repente, le quita efecto y tu sangre se espesa.</p></div>
+      </div>
+      <div class="card" style="display:flex;gap:16px;align-items:center">
+        <svg width="70" height="70" viewBox="0 0 80 80" aria-label="Consumo constante" style="flex:none"><rect x="14" y="20" width="52" height="44" rx="6" fill="#e8f1fb" stroke="#0a4c9c" stroke-width="2.5"/><path d="M14 30h52M26 14v10M54 14v10" stroke="#0a4c9c" stroke-width="2.5" stroke-linecap="round"/><path d="M24 42h6M37 42h6M50 42h6M24 52h6M37 52h6" stroke="#1f9d6b" stroke-width="3" stroke-linecap="round"/></svg>
+        <div><h4>La meta: lo mismo cada semana</h4><p style="margin:0">Come una porción parecida de verduras cada semana. Así tu dosis de warfarina se mantiene estable.</p></div>
+      </div>
+    </div>
+
+    <h3 class="reveal" style="margin-top:30px">Semáforo de alimentos</h3>
+    <div class="semaforo">
+      <div class="sem-col sem-verde reveal">
+        <div class="sem-head"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Come con confianza</div>
+        <div class="sem-body">
+          <p style="margin:0 0 8px;font-size:.9rem;color:var(--gris-suave)">Estos tienen mucha vitamina K. <b>No los elimines</b>: mantén una cantidad parecida cada semana.</p>
+          <ul>
+            <li>Espinaca</li><li>Brócoli</li><li>Col rizada (kale)</li><li>Acelga</li><li>Repollo</li><li>Lechuga</li><li>Perejil</li>
+          </ul>
+        </div>
+      </div>
+      <div class="sem-col sem-amarillo reveal">
+        <div class="sem-head"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01"/><circle cx="12" cy="12" r="9"/></svg> Con moderación y constancia</div>
+        <div class="sem-body">
+          <p style="margin:0 0 8px;font-size:.9rem;color:var(--gris-suave)">Aportan vitamina K o grasa. Consúmelos de forma pareja, sin grandes cambios.</p>
+          <ul>
+            <li>Aguacate</li><li>Aceites vegetales</li><li>Té verde (en poca cantidad)</li><li>Coles de Bruselas</li>
+          </ul>
+        </div>
+      </div>
+      <div class="sem-col sem-rojo reveal">
+        <div class="sem-head"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg> Mejor evitar</div>
+        <div class="sem-body">
+          <p style="margin:0 0 8px;font-size:.9rem;color:var(--gris-suave)">Por recomendación de la clínica, evita:</p>
+          <ul>
+            <li>Cilantro</li>
+            <li>Suplementos o "licuados verdes" con mucha vitamina K</li>
+            <li>Cambios bruscos en tu dieta (dietas nuevas, ayunos largos)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="alerta aviso reveal">
+      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="#e8820c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg>
+      <div><h4>Avisa si cambias tu alimentación</h4><p>Si empiezas una dieta, bajas mucho de peso, o cambias tus comidas, cuéntaselo a tu clínica: puede que necesites un control de INR y ajustar la dosis.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SECCIÓN 7 ===================== -->
+<section class="bloque" id="s7">
+  <div class="contenedor">
+    <span class="eyebrow reveal">Sección 7</span>
+    <h2 class="reveal">Alcohol</h2>
+    <p class="subtitulo reveal">El alcohol afecta la forma en que tu cuerpo maneja la warfarina. Lo mejor es evitarlo.</p>
+    <div class="grid g3">
+      <div class="card uso-card reveal">
+        <div class="icono-caja" style="background:var(--verde-claro)"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#1f9d6b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 22h8M12 15v7M5 3h14l-1 7a6 6 0 0 1-12 0z"/></svg></div>
+        <h4>Lo mejor es evitarlo</h4>
+        <p>Lo ideal es no tomar alcohol. Si acaso, solo una cantidad muy pequeña y en alguna ocasión especial. Pregúntale a tu médico por tu caso.</p>
+      </div>
+      <div class="card uso-card reveal">
+        <div class="icono-caja" style="background:var(--rojo-claro)"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#d93a3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6M9 9l6 6"/></svg></div>
+        <h4>Evita los excesos</h4>
+        <p>Emborracharse cambia mucho tu INR y aumenta el riesgo de sangrado y de caídas.</p>
+      </div>
+      <div class="card uso-card reveal">
+        <div class="icono-caja" style="background:var(--naranja-claro)"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#e8820c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l-1 9a5 5 0 0 1-10 0z"/><path d="M9 21h6"/></svg></div>
+        <h4>Cuidado con el hígado</h4>
+        <p>Si tienes una enfermedad del hígado, consulta antes de tomar alcohol: puede ser más peligroso.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SECCIÓN 8 ===================== -->
+<section class="bloque" id="s8" style="background:var(--azul-muy-claro)">
+  <div class="contenedor">
+    <span class="eyebrow reveal">Sección 8</span>
+    <h2 class="reveal">Interacciones con otros medicamentos</h2>
+    <p class="subtitulo reveal">La warfarina se lleva mal con muchos medicamentos y productos naturales. Algunos suben el INR (más sangrado) y otros lo bajan (más riesgo de coágulo).</p>
+
+    <h3 class="reveal">Aumentan el riesgo de sangrado</h3>
+    <div class="grid g3">
+      <div class="inter-card sangra reveal"><h4>Antiinflamatorios (AINEs)</h4><p>Ibuprofeno, naproxeno, diclofenaco. Para el dolor, pregunta: muchas veces el acetaminofén es más seguro.</p></div>
+      <div class="inter-card sangra reveal"><h4>Aspirina</h4><p>Sube el riesgo de sangrado. Solo úsala si tu médico lo indica.</p></div>
+      <div class="inter-card sangra reveal"><h4>Clopidogrel</h4><p>Otro "antiplaquetario". Junto a la warfarina aumenta mucho el sangrado.</p></div>
+    </div>
+
+    <h3 class="reveal" style="margin-top:22px">Pueden subir tu INR</h3>
+    <div class="grid g3">
+      <div class="inter-card reveal"><h4>Muchos antibióticos</h4><p>Algunos suben el INR rápido. Avisa siempre que tomas warfarina cuando te formulen uno.</p></div>
+      <div class="inter-card reveal"><h4>Amiodarona</h4><p>Un medicamento para el corazón que sube bastante el INR. Requiere ajustar la dosis y controlar.</p></div>
+      <div class="inter-card reveal"><h4>Antifúngicos (hongos)</h4><p>Como fluconazol o ketoconazol. Suben el INR.</p></div>
+    </div>
+
+    <h3 class="reveal" style="margin-top:22px">Pueden bajar tu INR o alterarlo</h3>
+    <div class="grid g4">
+      <div class="inter-card reveal"><h4>Anticonvulsivantes</h4><p>Como carbamazepina o fenitoína. Pueden bajar el efecto. No los suspendas: avisa.</p></div>
+      <div class="inter-card reveal"><h4>Ginkgo</h4><p>Producto natural para la memoria. Aumenta el riesgo de sangrado.</p></div>
+      <div class="inter-card reveal"><h4>Ginseng</h4><p>Puede bajar el efecto de la warfarina.</p></div>
+      <div class="inter-card reveal"><h4>Hierba de San Juan</h4><p>Le quita efecto a la warfarina. Evítala.</p></div>
+    </div>
+
+    <div class="alerta peligro reveal">
+      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="#d93a3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg>
+      <div><h4>Regla de oro</h4><p>Antes de empezar <b>cualquier</b> medicamento nuevo (incluso de venta libre, vitaminas, hierbas o remedios caseros), pregunta a tu médico o farmaceuta. Y avisa siempre que tomas warfarina. Después de empezar o suspender un medicamento, quizá necesites un control de INR.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SECCIÓN 9 ===================== -->
+<section class="bloque" id="s9">
+  <div class="contenedor">
+    <span class="eyebrow reveal">Sección 9</span>
+    <h2 class="reveal">Procedimientos médicos y cirugías</h2>
+    <p class="subtitulo reveal">Si te van a hacer un procedimiento, hay que planear con tiempo. Regla más importante: <b>avisa siempre que tomas warfarina</b>.</p>
+    <div class="grid g3">
+      <div class="card uso-card reveal">
+        <div class="icono-caja"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#0a4c9c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4l6 6-9 9-6 1 1-6z"/><path d="M12 6l6 6"/></svg></div>
+        <h4>Cirugías</h4>
+        <p>Casi siempre hay que ajustar o pausar la warfarina días antes, a veces con una inyección de reemplazo. Lo planea tu médico.</p>
+      </div>
+      <div class="card uso-card reveal">
+        <div class="icono-caja"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#0a4c9c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 16 0v4a4 4 0 0 1-8 0"/><circle cx="12" cy="16" r="2"/></svg></div>
+        <h4>Colonoscopia y endoscopia</h4>
+        <p>Si solo miran, a veces no hace falta pausarla. Si toman muestras o quitan pólipos, puede que sí. Lo decide el médico.</p>
+      </div>
+      <div class="card uso-card reveal">
+        <div class="icono-caja"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#0a4c9c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6M9 5h6"/><circle cx="12" cy="15" r="6"/></svg></div>
+        <h4>Biopsias</h4>
+        <p>Tomar un pedacito de tejido puede sangrar. Avisa antes para que planeen.</p>
+      </div>
+    </div>
+    <div class="alerta info reveal">
+      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="#1565c0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a5 5 0 0 0-5 5v3H5v4h2v6h10v-6h2v-4h-2V7a5 5 0 0 0-5-5z"/></svg>
+      <div><h4>Extracciones dentales y limpiezas</h4><p>Para sacar una muela o una limpieza, muchas veces <b>no</b> hay que suspender la warfarina si tu INR está en rango; el odontólogo usa técnicas para controlar el sangrado. Avísale siempre que eres anticoagulado y muéstrale tu INR más reciente.</p></div>
+    </div>
+    <div class="alerta peligro reveal">
+      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="#d93a3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6M9 9l6 6"/></svg>
+      <div><h4>Nunca suspendas la warfarina por tu cuenta</h4><p>Dejarla sin plan puede causar un coágulo. Solo el médico decide cuándo pausar y cuándo reiniciar. Muestra siempre tu <b>tarjeta de anticoagulado</b>.</p></div>
+    </div>
+    <div class="card reveal" style="display:flex;gap:18px;align-items:center;flex-wrap:wrap">
+      <svg width="70" height="70" viewBox="0 0 80 80" aria-label="Tarjeta de anticoagulado" style="flex:none"><rect x="8" y="20" width="64" height="42" rx="6" fill="#e8f1fb" stroke="#0a4c9c" stroke-width="2.5"/><rect x="8" y="26" width="64" height="8" fill="#0a4c9c"/><path d="M16 44h30M16 52h20" stroke="#0a4c9c" stroke-width="3" stroke-linecap="round"/><circle cx="58" cy="50" r="7" fill="#d93a3a"/><path d="M58 46v8M54 50h8" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+      <div style="flex:1;min-width:220px">
+        <h4 style="margin-bottom:4px">Lleva siempre tu tarjeta de anticoagulado</h4>
+        <p style="margin:0;color:var(--gris-suave)">Dice qué tomas, tu dosis y tu rango de INR. Enséñala en toda consulta, urgencia, cirugía o al odontólogo. Guárdala en tu billetera.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ===================== SECCIÓN 10 ===================== -->
+<section class="bloque" id="s10" style="background:var(--azul-muy-claro)">
+  <div class="contenedor">
+    <span class="eyebrow reveal" style="background:var(--rojo-claro);color:var(--rojo)">Sección 10 · Urgencias</span>
+    <h2 class="reveal">Signos de alarma</h2>
+    <p class="subtitulo reveal">Como la warfarina hace la sangre más líquida, hay señales que avisan de un sangrado. Si tienes alguna, <b>busca ayuda médica de inmediato</b>.</p>
+    <div class="banner-urg reveal">
+      <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h3l2-5 4 10 2-5h5"/></svg>
+      <div>
+        <h3>Ante una emergencia, llama a la línea de urgencias</h3>
+        <div class="tel">123</div>
+        <span style="font-size:.85rem;opacity:.9">(En Colombia: 123. Ten a mano el número de tu clínica de anticoagulación.)</span>
+      </div>
+    </div>
+    <div class="urg-grid">
+      <div class="urg-card reveal"><svg class="ilus" viewBox="0 0 40 40"><path d="M20 6s10 10 10 18a10 10 0 0 1-20 0c0-8 10-18 10-18z" fill="#d93a3a"/></svg><h4>Sangrado que no para</h4><p>De nariz, encías o una herida.</p></div>
+      <div class="urg-card reveal"><svg class="ilus" viewBox="0 0 40 40"><path d="M20 6c6 8 9 11 9 16a9 9 0 0 1-18 0c0-5 3-8 9-16z" fill="#a52222"/></svg><h4>Orina roja o rosada</h4><p>Sangre al orinar.</p></div>
+      <div class="urg-card reveal"><svg class="ilus" viewBox="0 0 40 40"><ellipse cx="20" cy="22" rx="10" ry="8" fill="#333"/><ellipse cx="20" cy="22" rx="5" ry="4" fill="#111"/></svg><h4>Heces negras</h4><p>Popó negro como alquitrán.</p></div>
+      <div class="urg-card reveal"><svg class="ilus" viewBox="0 0 40 40"><path d="M8 10h18l-2 8H12z" fill="#a52222"/><circle cx="17" cy="26" r="4" fill="#d93a3a"/></svg><h4>Vómito con sangre</h4><p>Rojo o como "cuncho de café".</p></div>
+      <div class="urg-card reveal"><svg class="ilus" viewBox="0 0 40 40"><circle cx="20" cy="18" r="9" fill="#d93a3a"/><path d="M20 27v7M15 32l5 2 5-2" stroke="#d93a3a" stroke-width="3" stroke-linecap="round"/></svg><h4>Dolor de cabeza muy fuerte</h4><p>El peor de tu vida, de repente.</p></div>
+      <div class="urg-card reveal"><svg class="ilus" viewBox="0 0 40 40"><circle cx="20" cy="16" r="8" fill="#d93a3a"/><path d="M20 24v8M14 30l6 2 6-2" stroke="#d93a3a" stroke-width="3" stroke-linecap="round"/></svg><h4>Golpe fuerte en la cabeza</h4><p>Aunque te sientas bien.</p></div>
+      <div class="urg-card reveal"><svg class="ilus" viewBox="0 0 40 40"><path d="M20 32s-11-7-11-15a6 6 0 0 1 11-3 6 6 0 0 1 11 3c0 8-11 15-11 15z" fill="#d93a3a"/></svg><h4>Dolor en el pecho</h4><p>Opresión que no cede.</p></div>
+      <div class="urg-card reveal"><svg class="ilus" viewBox="0 0 40 40"><path d="M20 8c2 4 6 6 6 12a6 6 0 0 1-12 0c0-6 4-8 6-12z" fill="#d93a3a"/><path d="M20 30v4" stroke="#d93a3a" stroke-width="3" stroke-linecap="round"/></svg><h4>Dificultad para respirar</h4><p>Te falta el aire de repente.</p></div>
+      <div class="urg-card reveal"><svg class="ilus" viewBox="0 0 40 40"><ellipse cx="20" cy="20" rx="13" ry="10" fill="#9c6ab5"/><ellipse cx="20" cy="20" rx="7" ry="5" fill="#6a4bbc"/></svg><h4>Moretones grandes</h4><p>Sin haberte golpeado.</p></div>
+    </div>
+    <div class="alerta aviso reveal">
+      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="#e8820c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg>
+      <div><h4>En urgencias, muestra tu tarjeta</h4><p>Diles siempre que tomas warfarina y tu rango de INR. Eso ayuda al equipo a atenderte más rápido y seguro.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SECCIÓN 11 ===================== -->
+<section class="bloque" id="s11">
+  <div class="contenedor">
+    <span class="eyebrow reveal">Sección 11</span>
+    <h2 class="reveal">Viajes</h2>
+    <p class="subtitulo reveal">Puedes viajar sin problema. Solo organiza tu medicamento y tus controles con anticipación.</p>
+    <div class="grid g4">
+      <div class="card uso-card reveal">
+        <div class="icono-caja"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#0a4c9c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 16l9-3 9 3M4 20h16M12 3l1 8"/></svg></div>
+        <h4>Lleva de sobra</h4>
+        <p>Empaca warfarina para todo el viaje y unos días extra.</p>
+      </div>
+      <div class="card uso-card reveal">
+        <div class="icono-caja"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#0a4c9c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="7" width="16" height="13" rx="2"/><path d="M9 7V4h6v3"/></svg></div>
+        <h4>En el equipaje de mano</h4>
+        <p>Nunca en la maleta de bodega. Llévala contigo, en su frasco.</p>
+      </div>
+      <div class="card uso-card reveal">
+        <div class="icono-caja"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#0a4c9c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2h6M10 2v5l-4 9a3 3 0 0 0 3 4h6a3 3 0 0 0 3-4l-4-9V2"/></svg></div>
+        <h4>Planea tu control de INR</h4>
+        <p>Si el viaje es largo, pregunta dónde podrías controlarte el INR o si conviene hacerlo antes de salir.</p>
+      </div>
+      <div class="card uso-card reveal">
+        <div class="icono-caja"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#0a4c9c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg></div>
+        <h4>Carta médica</h4>
+        <p>Pide una carta que diga que tomas warfarina. Ayuda en aeropuertos y si necesitas atención afuera.</p>
+      </div>
+    </div>
+    <div class="card reveal" style="display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin-top:4px">
+      <svg width="64" height="64" viewBox="0 0 80 80" aria-label="Pulsera médica" style="flex:none"><ellipse cx="40" cy="40" rx="22" ry="26" fill="none" stroke="#0a4c9c" stroke-width="4"/><rect x="28" y="30" width="24" height="20" rx="5" fill="#d93a3a"/><path d="M40 34v12M34 40h12" stroke="#fff" stroke-width="3" stroke-linecap="round"/></svg>
+      <div style="flex:1;min-width:220px">
+        <h4 style="margin-bottom:4px">Usa una pulsera o placa de identificación</h4>
+        <p style="margin:0;color:var(--gris-suave)">Una pulsera que diga "tomo warfarina" avisa al personal de salud si tienes un accidente y no puedes hablar.</p>
+      </div>
+    </div>
+    <div class="alerta info reveal">
+      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="#1565c0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 16l9-3 9 3M4 20h16M12 3l1 8"/></svg>
+      <div><h4>Viajar en avión no está restringido</h4><p>Puedes volar sin problema, pero <b>pregunta a tu médico</b> antes de un viaje largo para organizar tus dosis y tu control de INR.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SECCIÓN 12 ===================== -->
+<section class="bloque" id="s12" style="background:var(--azul-muy-claro)">
+  <div class="contenedor">
+    <span class="eyebrow reveal">Sección 12</span>
+    <h2 class="reveal">Actividad física</h2>
+    <p class="subtitulo reveal">Moverte es bueno para tu corazón y tu circulación. Solo evita los golpes fuertes y las caídas.</p>
+    <div class="grid g2">
+      <div class="card reveal">
+        <div class="icono-caja" style="background:var(--verde-claro)"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#1f9d6b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13" cy="4" r="2"/><path d="M6 20l3-6 4 2 2 4M9 14l-2-4 5-2 3 3 3 1"/></svg></div>
+        <h4>Deportes seguros</h4>
+        <p>Caminar, nadar, montar bicicleta tranquila, bailar, trotar suave y estiramientos. Son ideales.</p>
+      </div>
+      <div class="card reveal">
+        <div class="icono-caja" style="background:var(--rojo-claro)"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#d93a3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6M9 9l6 6"/></svg></div>
+        <h4>Mejor evitar</h4>
+        <p>Deportes con golpes o caídas: boxeo, fútbol de choque, artes marciales, esquí, motos. Suben el riesgo de sangrado.</p>
+      </div>
+    </div>
+    <div class="alerta aviso reveal">
+      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="#e8820c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg>
+      <div><h4>Prevén las caídas en casa</h4><p>Quita alfombras sueltas, usa buena luz, pon barras en el baño y calza zapatos firmes. Una caída con warfarina puede causar sangrados, sobre todo en la cabeza. Usa cepillo suave y afeitadora eléctrica para evitar cortes.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SECCIÓN 13 ===================== -->
+<section class="bloque" id="s13">
+  <div class="contenedor">
+    <span class="eyebrow reveal">Sección 13</span>
+    <h2 class="reveal">Embarazo</h2>
+    <p class="subtitulo reveal">Este es un tema muy importante para las mujeres que pueden quedar en embarazo.</p>
+    <div class="card reveal" style="display:flex;gap:18px;align-items:center;flex-wrap:wrap">
+      <svg width="70" height="70" viewBox="0 0 60 60" aria-label="Embarazo" style="flex:none"><circle cx="26" cy="14" r="6" fill="#0a4c9c"/><path d="M26 20c-4 0-6 4-6 9 0 3 1 5 1 8 4 3 5 6 3 12" stroke="#0a4c9c" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M27 28c6 0 10 4 10 9s-4 8-9 8" fill="#e8f1fb" stroke="#0a4c9c" stroke-width="3"/></svg>
+      <div style="flex:1;min-width:240px">
+        <h4>La warfarina no se usa en el embarazo</h4>
+        <p style="margin:0">La warfarina puede dañar al bebé, sobre todo en los primeros meses. Si estás embarazada o buscando estarlo, el médico usará otra opción más segura (casi siempre una inyección).</p>
+      </div>
+    </div>
+    <div class="alerta peligro reveal">
+      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="#d93a3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v5M12 16h.01"/></svg>
+      <div><h4>Si crees que podrías estar embarazada, consulta de inmediato</h4><p>No suspendas el medicamento por tu cuenta, pero <b>avisa a tu médico lo antes posible</b>. Si puedes quedar en embarazo, habla con tu médico sobre un método anticonceptivo mientras tomas warfarina.</p></div>
+    </div>
+  </div>
+</section>
+<!-- ===================== SECCIÓN 14 ===================== -->
+<section class="bloque" id="s14" style="background:var(--azul-muy-claro)">
+  <div class="contenedor">
+    <span class="eyebrow reveal">Sección 14</span>
+    <h2 class="reveal">Preguntas frecuentes</h2>
+    <p class="subtitulo reveal">Toca cada pregunta para ver la respuesta. Reunimos más de 40 dudas comunes.</p>
+    <div class="acordeon reveal">
+      <div class="acc-item"><button class="acc-head" onclick="toggleAcc(this)">¿La warfarina "adelgaza" la sangre?<span class="mas">+</span></button><div class="acc-body"><div class="inner">No la vuelve más delgada de verdad. Lo que hace es evitar que se formen coágulos. Por eso se llama "anticoagulante".</div></div></div>
+      <div class="acc-item"><button class="acc-head" onclick="toggleAcc(this)">¿Puedo dejar de tomarla si me siento bien?<span class="mas">+</span></button><div class="acc-body"><div class="inner">No. Sentirte bien no significa que el riesgo pasó. Suspenderla puede causar un coágulo grave. Solo tu médico decide.</div></div></div>
+      <div class="acc-item"><button class="acc-head" onclick="toggleAcc(this)">¿A qué hora debo tomarla?<span class="mas">+</span></button><div class="acc-body"><div class="inner">A la misma hora todos los días, casi siempre en la tarde o la noche. Así, si cambian tu dosis tras un control, alcanzas a ajustarla ese día.</div></div></div>
+      <div class="acc-item"><button class="acc-head" onclick="toggleAcc(this)">¿Qué es el INR?<span class="mas">+</span></button><div class="acc-body"><div class="inner">Es un número que mide qué tan líquida está tu sangre. Guía a tu médico para saber si tu dosis está bien. El rango ideal suele ser 2,0 a 3,0.</div></div></div>
+      <div class="acc-item"><button class="acc-head" onclick="toggleAcc(this)">¿Cada cuánto debo controlarme el INR?<span class="mas">+</span></button><div class="acc-body"><div class="inner">Depende de tu caso. Al inicio o tras cambios, puede ser cada pocos días o semanal. Cuando está estable, cada 4 semanas aproximadamente. Tu clínica te lo indica.</div></div></div>
+      <div class="acc-item"><button class="acc-head" onclick="toggleAcc(this)">¿Por qué mi dosis cambia entre días?<span class="mas">+</span></button><div class="acc-body"><div class="inner">Es normal. Como solo hay tabletas de 5 mg, a veces se reparte la dosis de la semana (por ejemplo, una tableta un día y media el siguiente). Sigue el plan que te dieron.</div></div></div>
+      <div class="acc-item"><button class="acc-head" onclick="toggleAcc(this)">¿Cómo parto la tableta?<span class="mas">+</span></button><div class="acc-body"><div class="inner">Con un cortador de pastillas de la farmacia, para partirla pareja por la mitad o en cuartos. Parte solo la que vas a tomar y guarda el resto en su frasco.</div></div></div>
+      <div class="acc-item"><button class="acc-head" onclick="toggleAcc(this)">¿Puedo comer verduras verdes?<span class="mas">+</span></button><div class="acc-body"><div class="inner">Sí. No hay que eliminarlas. Lo importante es comer una cantidad parecida cada semana, sin grandes cambios. La constancia mantiene tu INR estable.</div></div></div>
+      <div class="acc-item"><button class="acc-head" onclick="toggleAcc(this)">¿La vitamina K es mala para mí?<span class="mas">+</span></button><div class="acc-body"><div class="inner">No es mala. Solo hay que mantener un consumo constante, porque cambia el efecto de la warfarina si comes mucha o muy poca de repente.</div></div></div>
+      <div class="acc-item"><button class="acc-head" onclick="toggleAcc(this)">¿Puedo tomar alcohol?<span class="mas">+</span></button><div class="acc-body"><div class="inner">Lo mejor es evitarlo. Si acaso, solo una cantidad muy pequeña en una ocasión especial. Los excesos alteran tu INR. Si tienes enfermedad del hígado, consulta antes.</div></div></div>
+      <div class="acc-item"><button class="acc-head" onclick="toggleAcc(this)">¿Puedo tomar acetaminofén para el dolor?<span class="mas">+</span></button><div class="acc-body"><div class="inner">Suele ser la opción más segura, en dosis moderadas. Evita ibuprofeno, naproxeno y aspirina salvo que tu médico los autorice.</div></div></div>
+      <div class="acc-item"><button class="acc-head" onclick="toggleAcc(this)">¿Qué hago si olvido una dosis?<span class="mas">+</span></button><div class="acc-body"><div class="inner">Si lo recuerdas el mismo día, tómala. Si ya es al día siguiente, sáltala y sigue normal. Nunca tomes dos juntas. Anótalo y avisa en tu control.</div></div></div>
+      <div class="acc-item"><button class="acc-head" onclick="toggleAcc(this)">¿Y si tomo una dosis de más?<span class="mas">+</span></button><div class="acc-body"><div class="inner">Llama a tu clínica o a urgencias. Vigila señales de sangrado. Pueden pedirte un control de INR.</div></div></div>
+      <div class="acc-item"><button class="acc-head" onclick="toggleAcc(this)">¿Antibióticos y warfarina se pueden juntar?<span class="mas">+</span></button><div class="acc-body"><div class="inner">Muchos antibióticos suben el INR. No los evites si los necesitas, pero avisa que tomas warfarina; puede que necesites un control extra.</div></div></div>
+      <div class="acc-item"><button class="acc-head" onclick="toggleAcc(this)">¿Puedo tomar remedios naturales o de hierbas?<span class="mas">+</span></button><div class="acc-body"><div class="inner">Consulta antes. Ginkgo, ginseng y hierba de San Juan interfieren con la warfarina. "Natural" no siempre es seguro.</div></div></div>
+      <div class="acc-item"><button class="acc-head" onclick="toggleAcc(this)">¿Es normal que me salgan moretones?<span class="mas">+</span></button><div class="acc-body"><div class="inner">Pequeños moretones pueden aparecer. Consulta si son muy grandes, muchos o salen sin haberte golpeado.</div></div></div>
+      <div class="acc-item"><button class="acc-head" onclick="toggleAcc(this)">¿Puedo hacer ejercicio?<span class="mas">+</span></button><div class="acc-body"><div class="inner">Sí, el ejercicio suave es bueno. Evita deportes con golpes o caídas. Camina, nada o monta bicicleta con tranquilidad.</div></div></div>
+      <div class="acc-item"><button class="acc-head" onclick="toggleAcc(this)">¿Puedo viajar en avión?<span class="mas">+</span></button><div class="acc-body"><div class="inner">Viajar en avión no está restringido, pero pregunta a tu médico. Lleva la warfarina en tu equipaje de mano, con dosis de sobra y una carta médica, y planea tu control de INR si el viaje es largo.</div></div></div>
+      <div class="acc-item"><button class="acc-head" onclick="toggleAcc(this)">¿Puedo ir al odontólogo?<span class="mas">+</span></button><div class="acc-body"><div class="inner">Sí. Para muchas extracciones y limpiezas no hay que suspenderla si tu INR está en rango. Avisa siempre y muestra tu INR más reciente.</div></div></div>
+      <div class="acc-item"><button class="acc-head" onclick="toggleAcc(this)">¿Qué hago antes de una cirugía?<span class="mas">+</span></button><div class="acc-body"><div class="inner">Avisa con tiempo. El médico te dirá cuándo pausar la warfarina y si necesitas una inyección de reemplazo. No decidas tú solo.</div></div></div>
+      <div class="acc-item"><button class="acc-head" onclick="toggleAcc(this)">¿Puedo quedar en embarazo tomando warfarina?<span class="mas">+</span></button><div class="acc-body"><div class="inner">La warfarina no se usa en el embarazo porque puede dañar al bebé. Si puedes quedar en embarazo, usa anticoncepción y avisa de inmediato si sospechas embarazo.</div></div></div>
+      <div class="acc-item"><button class="acc-head" onclick="toggleAcc(this)">¿La warfarina causa caída del cabello?<span class="mas">+</span></button><div class="acc-body"><div class="inner">En algunas personas puede haber algo de caída, pero no es lo común. Coméntalo en tu control si te preocupa; no suspendas el medicamento.</div></div></div>
+      <div class="acc-item"><button class="acc-head" onclick="toggleAcc(this)">¿Puedo usar un pastillero?<span class="mas">+</span></button><div class="acc-body"><div class="inner">Sí, y ayuda mucho a no olvidar dosis, sobre todo cuando la dosis cambia entre días. Prepáralo según tu plan semanal.</div></div></div>
+      <div class="acc-item"><button class="acc-head" onclick="toggleAcc(this)">¿Puedo ponerme vacunas?<span class="mas">+</span></button><div class="acc-body"><div class="inner">Sí. Avisa que tomas warfarina; suelen usar una aguja fina y presionar un poco más para evitar moretón.</div></div></div>
+      <div class="acc-item"><button class="acc-head" onclick="toggleAcc(this)">¿Puedo tener relaciones sexuales?<span class="mas">+</span></button><div class="acc-body"><div class="inner">Sí, con normalidad. No hay problema por tomar la warfarina.</div></div></div>
+      <div class="acc-item"><button class="acc-head" onclick="toggleAcc(this)">¿Puedo hacerme tatuajes o piercings?<span class="mas">+</span></button><div class="acc-body"><div class="inner">Mejor evítalos o consúltalo, porque pueden sangrar más e infectarse.</div></div></div>
+      <div class="acc-item"><button class="acc-head" onclick="toggleAcc(this)">¿Puedo seguir con mis pastillas de la presión o el azúcar?<span class="mas">+</span></button><div class="acc-body"><div class="inner">Sí, si tu médico las conoce. Mantén una lista completa de todo lo que tomas y muéstrala en cada control.</div></div></div>
+      <div class="acc-item"><button class="acc-head" onclick="toggleAcc(this)">¿Por cuánto tiempo tendré que tomarla?<span class="mas">+</span></button><div class="acc-body"><div class="inner">Depende de tu caso: algunos la toman unos meses y otros de por vida (por ejemplo, con válvula mecánica). Tu médico te lo dirá.</div></div></div>
+      <div class="acc-item"><button class="acc-head" onclick="toggleAcc(this)">¿Qué hago si se me acaban las tabletas?<span class="mas">+</span></button><div class="acc-body"><div class="inner">No dejes que se acaben. Pide tu fórmula con anticipación. Quedarte sin warfarina sube el riesgo de coágulo.</div></div></div>
+      <div class="acc-item"><button class="acc-head" onclick="toggleAcc(this)">¿Puedo tomarla con jugo, leche o café?<span class="mas">+</span></button><div class="acc-body"><div class="inner">Lo mejor es con agua. Evita cambios grandes en bebidas como el té verde, que tiene vitamina K.</div></div></div>
+      <div class="acc-item"><button class="acc-head" onclick="toggleAcc(this)">¿El estrés o una gripa afectan el INR?<span class="mas">+</span></button><div class="acc-body"><div class="inner">Sí, las enfermedades, la fiebre, los vómitos o la diarrea pueden alterar el INR. Si te enfermas varios días, avisa a tu clínica.</div></div></div>
+      <div class="acc-item"><button class="acc-head" onclick="toggleAcc(this)">¿Puedo comer aguacate?<span class="mas">+</span></button><div class="acc-body"><div class="inner">Sí, con moderación y de forma constante. Como tiene grasa y algo de vitamina K, evita comer cantidades muy distintas de un día a otro.</div></div></div>
+      <div class="acc-item"><button class="acc-head" onclick="toggleAcc(this)">¿El cilantro afecta la warfarina?<span class="mas">+</span></button><div class="acc-body"><div class="inner">El cilantro tiene bastante vitamina K. Por recomendación de la clínica, es mejor evitarlo para no alterar tu INR.</div></div></div>
+      <div class="acc-item"><button class="acc-head" onclick="toggleAcc(this)">¿Puedo donar sangre?<span class="mas">+</span></button><div class="acc-body"><div class="inner">Por lo general no se recomienda donar sangre mientras tomas warfarina. Pregunta en tu clínica.</div></div></div>
+      <div class="acc-item"><button class="acc-head" onclick="toggleAcc(this)">¿La warfarina interactúa con la comida frita o grasosa?<span class="mas">+</span></button><div class="acc-body"><div class="inner">No de forma directa, pero una alimentación sana ayuda a tu corazón. Lo que más importa es la constancia con la vitamina K.</div></div></div>
+      <div class="acc-item"><button class="acc-head" onclick="toggleAcc(this)">¿Puedo manejar carro o moto?<span class="mas">+</span></button><div class="acc-body"><div class="inner">Sí puedes manejar carro. Con la moto ten más cuidado por el riesgo de golpes. Usa cinturón y casco siempre.</div></div></div>
+      <div class="acc-item"><button class="acc-head" onclick="toggleAcc(this)">¿Debo avisar a todos mis médicos que la tomo?<span class="mas">+</span></button><div class="acc-body"><div class="inner">Sí, siempre. A médicos, odontólogos, enfermeras y farmaceutas. Lleva tu tarjeta de anticoagulado a toda cita.</div></div></div>
+      <div class="acc-item"><button class="acc-head" onclick="toggleAcc(this)">¿La warfarina es la misma "cumarina" o "coumadin"?<span class="mas">+</span></button><div class="acc-body"><div class="inner">Coumadin® es una marca de warfarina. Es el mismo medicamento. Toma siempre la misma marca si es posible y avisa si te la cambian.</div></div></div>
+      <div class="acc-item"><button class="acc-head" onclick="toggleAcc(this)">¿Qué hago si vomito o tengo diarrea varios días?<span class="mas">+</span></button><div class="acc-body"><div class="inner">Avisa a tu clínica. Comer poco o perder líquidos puede cambiar tu INR y quizá necesites un control.</div></div></div>
+      <div class="acc-item"><button class="acc-head" onclick="toggleAcc(this)">¿Puedo tomar vitaminas o multivitamínicos?<span class="mas">+</span></button><div class="acc-body"><div class="inner">Consulta antes. Algunos multivitamínicos traen vitamina K y pueden alterar tu INR. Elige uno aprobado por tu médico y úsalo de forma constante.</div></div></div>
+      <div class="acc-item"><button class="acc-head" onclick="toggleAcc(this)">¿La warfarina hace efecto de una vez?<span class="mas">+</span></button><div class="acc-body"><div class="inner">No. Tarda varios días en alcanzar su efecto. Por eso al inicio a veces se acompaña con una inyección hasta que el INR llega al rango.</div></div></div>
+      <div class="acc-item"><button class="acc-head" onclick="toggleAcc(this)">¿Puedo tomar la warfarina con otros anticoagulantes?<span class="mas">+</span></button><div class="acc-body"><div class="inner">Solo si tu médico lo indica (a veces al inicio se combina con una inyección). No mezcles anticoagulantes por tu cuenta.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SECCIÓN 15 ===================== -->
+<section class="bloque" id="s15">
+  <div class="contenedor">
+    <span class="eyebrow reveal">Sección 15</span>
+    <h2 class="reveal">Mitos y realidades</h2>
+    <p class="subtitulo reveal">Aclaremos las ideas equivocadas más comunes sobre la warfarina.</p>
+    <div class="grid g2">
+      <div class="mito-card reveal"><div class="mito-h"><span class="etq m">MITO</span><p>"Si me siento bien, puedo dejar la warfarina."</p></div><div class="real-h"><span class="etq r">REAL</span><p>El riesgo de coágulo no se siente. Solo el médico decide cuándo parar.</p></div></div>
+      <div class="mito-card reveal"><div class="mito-h"><span class="etq m">MITO</span><p>"No puedo comer nada verde."</p></div><div class="real-h"><span class="etq r">REAL</span><p>Sí puedes. Lo importante es comer una cantidad parecida cada semana, no eliminarlas.</p></div></div>
+      <div class="mito-card reveal"><div class="mito-h"><span class="etq m">MITO</span><p>"El INR alto es mejor porque protege más."</p></div><div class="real-h"><span class="etq r">REAL</span><p>Un INR muy alto es peligroso: aumenta el sangrado. Lo ideal es estar en tu rango.</p></div></div>
+      <div class="mito-card reveal"><div class="mito-h"><span class="etq m">MITO</span><p>"Si olvidé una dosis, tomo doble para compensar."</p></div><div class="real-h"><span class="etq r">REAL</span><p>Nunca dupliques. Sigue la regla de la Sección 5.</p></div></div>
+      <div class="mito-card reveal"><div class="mito-h"><span class="etq m">MITO</span><p>"Los productos naturales son seguros."</p></div><div class="real-h"><span class="etq r">REAL</span><p>Ginkgo, ginseng y hierba de San Juan interfieren con la warfarina. Consulta siempre.</p></div></div>
+      <div class="mito-card reveal"><div class="mito-h"><span class="etq m">MITO</span><p>"Debo suspenderla antes de ir al dentista."</p></div><div class="real-h"><span class="etq r">REAL</span><p>Muchas veces no, si el INR está en rango. Nunca la pauses por tu cuenta.</p></div></div>
+      <div class="mito-card reveal"><div class="mito-h"><span class="etq m">MITO</span><p>"Ya no necesito controles si llevo años tomándola."</p></div><div class="real-h"><span class="etq r">REAL</span><p>Siempre necesitas controles de INR. El efecto cambia con comida, medicamentos y enfermedades.</p></div></div>
+      <div class="mito-card reveal"><div class="mito-h"><span class="etq m">MITO</span><p>"Puedo cambiar mi dosis si me siento raro."</p></div><div class="real-h"><span class="etq r">REAL</span><p>Solo el médico ajusta la dosis, según tu INR. Cambiarla tú es peligroso.</p></div></div>
+    </div>
+  </div>
+</section>
+<!-- ===================== SECCIÓN 16 ===================== -->
+<section class="bloque" id="s16" style="background:var(--azul-muy-claro)">
+  <div class="contenedor">
+    <span class="eyebrow reveal">Sección 16</span>
+    <h2 class="reveal">Autoevaluación: ¿cuánto aprendiste?</h2>
+    <p class="subtitulo reveal">Responde estas 25 preguntas. Recibirás la respuesta al instante.</p>
+    <div class="quiz-box reveal">
+      <div id="quizJuego">
+        <div class="quiz-progreso"><span id="quizBarra"></span></div>
+        <div class="quiz-conteo" id="quizConteo">Pregunta 1 de 25</div>
+        <div class="quiz-pregunta" id="quizPregunta"></div>
+        <div class="quiz-opciones" id="quizOpciones"></div>
+        <div class="quiz-feedback" id="quizFeedback"></div>
+        <div class="quiz-nav">
+          <span style="align-self:center;font-weight:700;color:var(--gris-suave)">Aciertos: <b id="quizAciertos" style="color:var(--verde)">0</b></span>
+          <button class="btn" id="quizSiguiente" onclick="siguientePregunta()" disabled>Siguiente →</button>
+        </div>
+      </div>
+      <div class="quiz-resultado" id="quizResultado">
+        <svg class="medidor" viewBox="0 0 120 120" aria-label="Resultado"><circle cx="60" cy="60" r="50" fill="none" stroke="#dbe6f2" stroke-width="12"/><circle id="medidorArco" cx="60" cy="60" r="50" fill="none" stroke="#1f9d6b" stroke-width="12" stroke-linecap="round" stroke-dasharray="314" stroke-dashoffset="314" transform="rotate(-90 60 60)"/></svg>
+        <div class="marca"><span id="quizPuntaje">0</span>/25</div>
+        <h3 id="quizMensaje"></h3>
+        <p id="quizConsejo" style="color:var(--gris-suave)"></p>
+        <button class="btn" onclick="reiniciarQuiz()">Volver a empezar</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SECCIÓN 17 ===================== -->
+<section class="bloque" id="s17">
+  <div class="contenedor">
+    <span class="eyebrow reveal">Sección 17</span>
+    <h2 class="reveal">Resumen y contacto</h2>
+    <p class="subtitulo reveal">Estas son las ideas clave de toda la guía. Puedes marcar tu lista e imprimirla para tenerla siempre a mano.</p>
+
+    <div class="resumen-info reveal">
+      <h3>Mis 8 reglas de oro</h3>
+      <div class="resumen-grid">
+        <div class="resumen-item"><span style="font-size:1.6rem">⏰</span><div><b>Misma hora cada día</b><span>Sin saltarte dosis.</span></div></div>
+        <div class="resumen-item"><span style="font-size:1.6rem">🧪</span><div><b>Contrólate el INR</b><span>Asiste a todos tus controles.</span></div></div>
+        <div class="resumen-item"><span style="font-size:1.6rem">🥬</span><div><b>Verduras constantes</b><span>No las elimines; come lo mismo cada semana.</span></div></div>
+        <div class="resumen-item"><span style="font-size:1.6rem">➕</span><div><b>Nunca dosis doble</b><span>Si olvidas una, mira la Sección 5.</span></div></div>
+        <div class="resumen-item"><span style="font-size:1.6rem">💬</span><div><b>Avisa nuevos medicamentos</b><span>Incluidos naturales y de venta libre.</span></div></div>
+        <div class="resumen-item"><span style="font-size:1.6rem">🩺</span><div><b>No la suspendas por tu cuenta</b><span>Ni para cirugías o dentista.</span></div></div>
+        <div class="resumen-item"><span style="font-size:1.6rem">🆔</span><div><b>Lleva tu tarjeta</b><span>De anticoagulado, siempre.</span></div></div>
+        <div class="resumen-item"><span style="font-size:1.6rem">🚨</span><div><b>Señales de alarma</b><span>Sangrado o golpe fuerte → urgencias.</span></div></div>
+      </div>
+    </div>
+
+    <h3 class="reveal" style="margin-top:30px">Lista de verificación</h3>
+    <p class="reveal" style="color:var(--gris-suave);margin-top:-6px">Toca cada punto para marcarlo.</p>
+    <div class="checklist reveal">
+      <div class="check-item" onclick="toggleCheck(this)"><div class="check-box">✓</div><span>Sé mi dosis y mi plan semanal de warfarina.</span></div>
+      <div class="check-item" onclick="toggleCheck(this)"><div class="check-box">✓</div><span>La tomo todos los días a la misma hora.</span></div>
+      <div class="check-item" onclick="toggleCheck(this)"><div class="check-box">✓</div><span>Sé cuál es mi rango de INR y cuándo es mi próximo control.</span></div>
+      <div class="check-item" onclick="toggleCheck(this)"><div class="check-box">✓</div><span>Como verduras verdes de forma constante cada semana.</span></div>
+      <div class="check-item" onclick="toggleCheck(this)"><div class="check-box">✓</div><span>Aviso a todos mis médicos y odontólogo que tomo warfarina.</span></div>
+      <div class="check-item" onclick="toggleCheck(this)"><div class="check-box">✓</div><span>Consulto antes de empezar cualquier medicamento nuevo.</span></div>
+      <div class="check-item" onclick="toggleCheck(this)"><div class="check-box">✓</div><span>Llevo mi tarjeta de anticoagulado o pulsera.</span></div>
+      <div class="check-item" onclick="toggleCheck(this)"><div class="check-box">✓</div><span>Conozco las señales de alarma para ir a urgencias.</span></div>
+    </div>
+
+    <div style="text-align:center;margin-top:26px" class="reveal">
+      <button class="btn" onclick="window.print()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:6px"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M6 14h12v8H6z"/></svg>
+        Imprimir / Guardar en PDF
+      </button>
+    </div>
+
+    <div class="resumen-info reveal" id="contacto" style="margin-top:30px;background:linear-gradient(135deg,var(--verde),#147951)">
+      <div style="display:flex;align-items:center;gap:14px;margin-bottom:6px">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M8 2v4M16 2v4M3 10h18"/><path d="M8 15l2 2 4-4"/></svg>
+        <h3 style="margin:0">Agenda tu cita en la Clínica de Anticoagulación</h3>
+      </div>
+      <p style="color:#eafff5;margin-bottom:18px">Para programar su cita con la <b>Clínica de Anticoagulación</b>, escríbanos o llámenos. Estamos para ayudarle.</p>
+      <div class="resumen-grid" style="grid-template-columns:1fr">
+        <div class="resumen-item" style="align-items:center">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 6L2 7"/></svg>
+          <div><b>Correo electrónico</b><span><a href="mailto:clinicadeanticoagulacion@husi.org.co" style="color:#fff;text-decoration:underline">clinicadeanticoagulacion@husi.org.co</a></span></div>
+        </div>
+        <div class="resumen-item" style="align-items:center">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.5-1.1a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/></svg>
+          <div><b>Teléfonos</b><span><a href="tel:9103211272" style="color:#fff;text-decoration:underline">910 321 1272</a> &nbsp;·&nbsp; <a href="tel:6015946161" style="color:#fff;text-decoration:underline">601 594 6161</a> ext. 2343</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="alerta info reveal" style="margin-top:26px">
+      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="#1565c0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9z"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+      <div><h4>Recuerda</h4><p>Guarda estos datos en tu celular y ten a mano la línea de urgencias (123 en Colombia). Ante cualquier duda sobre tu tratamiento, es mejor preguntar.</p></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div class="flotantes">
+  <button class="fab urgencia" onclick="irA('s10')" aria-label="Ir a signos de alarma" title="Signos de alarma">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg>
+  </button>
+  <button class="fab arriba" id="btnArriba" onclick="irA('inicio')" aria-label="Volver arriba" title="Volver arriba">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+</div>
+
+<footer class="pie">
+  <div class="contenedor">
+    <div>
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px">
+        <span style="background:#fff;border-radius:12px;padding:8px 12px;display:inline-flex;flex:none">
+          <img src="logo-husi.png" alt="Hospital Universitario San Ignacio" style="height:58px;width:auto;display:block">
+        </span>
+        <h4 style="margin:0">Hospital Universitario<br>San Ignacio</h4>
+      </div>
+      <p class="fuentes">Guía educativa para pacientes que toman warfarina. Este material no reemplaza la indicación de tu médico. Ante cualquier duda, comunícate con tu equipo de salud o tu clínica de anticoagulación.</p>
+    </div>
+    <div>
+      <h4>Agenda tu cita</h4>
+      <p class="fuentes" style="margin-bottom:6px">Clínica de Anticoagulación</p>
+      <a href="mailto:clinicadeanticoagulacion@husi.org.co">✉ clinicadeanticoagulacion@husi.org.co</a>
+      <a href="tel:9103211272">☎ 910 321 1272</a>
+      <a href="tel:6015946161">☎ 601 594 6161 ext. 2343</a>
+    </div>
+    <div>
+      <h4>Basado en evidencia</h4>
+      <p class="fuentes">CHEST · American Society of Hematology (ASH) · American College of Cardiology (ACC) · American Heart Association (AHA) · European Society of Cardiology (ESC) · British Society for Haematology · Anticoagulation Forum · ISMP · Ficha técnica oficial de warfarina.</p>
+    </div>
+    <div class="legal">
+      © <span id="anio"></span> Hospital Universitario San Ignacio · Material educativo con fines informativos. Siempre sigue las indicaciones de tu médico tratante.
+    </div>
+  </div>
+  <a href="index.html" class="hvp-footer-link">← Volver a Guías para Pacientes</a>
+</footer>
+
+<script>
+document.getElementById('anio').textContent=new Date().getFullYear();
+function irA(id){const el=document.getElementById(id);if(el)el.scrollIntoView({behavior:'smooth',block:'start'});cerrarMenu();}
+const sidebar=document.getElementById('sidebar'),overlay=document.getElementById('overlayMenu');
+document.getElementById('btnMenu').addEventListener('click',()=>{sidebar.classList.toggle('abierto');overlay.classList.toggle('visible');});
+function cerrarMenu(){sidebar.classList.remove('abierto');overlay.classList.remove('visible');}
+const btnTema=document.getElementById('btnTema');
+btnTema.addEventListener('click',()=>{
+  const body=document.body,nuevo=body.getAttribute('data-theme')==='dark'?'light':'dark';
+  body.setAttribute('data-theme',nuevo);
+  document.getElementById('icoTema').innerHTML=nuevo==='dark'
+    ?'<path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/>'
+    :'<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>';
+});
+const btnArriba=document.getElementById('btnArriba'),enlacesNav=document.querySelectorAll('.sidebar a');
+window.addEventListener('scroll',()=>{
+  const h=document.documentElement,alto=h.scrollHeight-h.clientHeight,pct=(h.scrollTop/alto)*100;
+  document.getElementById('barra-progreso').style.width=pct+'%';
+  btnArriba.classList.toggle('visible',h.scrollTop>500);
+  let actual='inicio';
+  document.querySelectorAll('main section').forEach(s=>{if(h.scrollTop>=s.offsetTop-120)actual=s.id;});
+  enlacesNav.forEach(a=>a.classList.toggle('activo',a.getAttribute('href')==='#'+actual));
+});
+const obs=new IntersectionObserver((e)=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible')});},{threshold:.12});
+function activarReveal(){document.querySelectorAll('.reveal:not(.visible)').forEach(el=>obs.observe(el));}
+function toggleAcc(btn){const item=btn.parentElement,body=item.querySelector('.acc-body');
+  if(item.classList.contains('abierto')){item.classList.remove('abierto');body.style.maxHeight=null;}
+  else{item.classList.add('abierto');body.style.maxHeight=body.scrollHeight+'px';}}
+function toggleCheck(el){el.classList.toggle('hecho');}
+</script>
+<script>
+/* ===== Medidor INR interactivo ===== */
+function setINR(zona,btn){
+  document.querySelectorAll('.inr-btn').forEach(b=>b.classList.remove('activo'));
+  if(btn) btn.classList.add('activo');
+  const aguja=document.getElementById('aguja'),val=document.getElementById('inrValor'),
+   etq=document.getElementById('inrEtq'),txt=document.getElementById('inrTexto');
+  if(zona==='bajo'){
+    aguja.style.transform='rotate(-62deg)'; val.textContent='1,4'; val.style.color='#d93a3a';
+    etq.textContent='INR bajo'; etq.style.color='#d93a3a';
+    txt.textContent='La sangre está muy espesa y hay más riesgo de coágulo. El médico puede subir un poco tu dosis.';
+  }else if(zona==='alto'){
+    aguja.style.transform='rotate(62deg)'; val.textContent='4,2'; val.style.color='#d93a3a';
+    etq.textContent='INR alto'; etq.style.color='#d93a3a';
+    txt.textContent='La sangre está muy líquida y hay más riesgo de sangrado. El médico puede bajar tu dosis. Vigila señales de sangrado.';
+  }else{
+    aguja.style.transform='rotate(0deg)'; val.textContent='2,5'; val.style.color='#1f9d6b';
+    etq.textContent='Zona ideal (terapéutica)'; etq.style.color='#1f9d6b';
+    txt.textContent='Tu sangre está protegida sin sangrar de más. ¡Aquí es donde quieres estar! Sigue igual tu dosis y tus controles.';
+  }
+}
+
+/* ===== QUIZ ===== */
+const preguntas=[
+  {q:"¿Cada cuánto debes tomar la warfarina?",o:["Solo cuando me siento mal","Todos los días, a la misma hora","Una vez a la semana"],c:1,f:"Se toma cada día, a la misma hora, casi siempre en la tarde o noche."},
+  {q:"¿Qué mide el INR?",o:["El azúcar en la sangre","Qué tan líquida está la sangre","La presión arterial"],c:1,f:"El INR mide qué tan líquida está tu sangre y guía tu dosis."},
+  {q:"El rango de INR ideal para la mayoría es...",o:["0,5 a 1,0","2,0 a 3,0","6,0 a 8,0"],c:1,f:"El rango habitual es 2,0 a 3,0 (tu médico te dice el tuyo)."},
+  {q:"Si tu INR está muy alto, hay más riesgo de...",o:["Coágulo","Sangrado","Fiebre"],c:1,f:"INR alto = sangre muy líquida = más riesgo de sangrado."},
+  {q:"Si tu INR está bajo, hay más riesgo de...",o:["Coágulo","Sangrado","Dolor de cabeza"],c:0,f:"INR bajo = sangre muy espesa = más riesgo de coágulo."},
+  {q:"¿Puedes comer verduras verdes con warfarina?",o:["No, están prohibidas","Sí, en cantidad constante cada semana","Solo los domingos"],c:1,f:"No se eliminan: la clave es comer una cantidad parecida cada semana."},
+  {q:"¿Por qué importa la constancia con la vitamina K?",o:["Porque engorda","Porque cambia el efecto de la warfarina","Porque mancha los dientes"],c:1,f:"Comer mucha o poca de repente sube o baja tu INR."},
+  {q:"En Colombia la warfarina viene en tabletas de...",o:["1 mg","5 mg","100 mg"],c:1,f:"Vienen de 5 mg; por eso muchas veces hay que partirlas."},
+  {q:"Para partir la tableta debes usar...",o:["Los dientes","Un cortador de pastillas","Un cuchillo grande"],c:1,f:"Un cortador de pastillas parte parejo la dosis indicada."},
+  {q:"Si olvidas una dosis y ya es al día siguiente, debes...",o:["Tomar dos juntas","Saltarte la olvidada y seguir normal","Tomar el triple"],c:1,f:"Nunca dupliques. Sáltate la olvidada y sigue tu horario."},
+  {q:"¿Puedes suspender la warfarina si te sientes bien?",o:["Sí, de inmediato","No, solo el médico decide","Sí, los fines de semana"],c:1,f:"El riesgo no se siente; suspenderla puede causar un coágulo."},
+  {q:"Para el dolor, ¿cuál suele ser más seguro?",o:["Ibuprofeno","Aspirina","Acetaminofén"],c:2,f:"El acetaminofén suele ser el más seguro; evita AINEs y aspirina sin permiso."},
+  {q:"Antes de empezar un medicamento nuevo debes...",o:["Tomarlo sin avisar","Preguntar a tu médico o farmaceuta","Suspender la warfarina"],c:1,f:"Muchos medicamentos alteran el INR: siempre consulta."},
+  {q:"Los antibióticos con warfarina...",o:["No afectan nada","Pueden subir el INR","Bajan la fiebre solamente"],c:1,f:"Muchos suben el INR; avisa y quizá necesites un control extra."},
+  {q:"¿Cuál producto natural interfiere con la warfarina?",o:["Manzanilla","Hierba de San Juan","Agua de panela"],c:1,f:"Ginkgo, ginseng y hierba de San Juan interfieren. Consulta siempre."},
+  {q:"Una señal de alarma para ir a urgencias es...",o:["Un moretón pequeño","Heces negras como alquitrán","Un poco de sed"],c:1,f:"Heces negras pueden indicar sangrado interno: busca ayuda ya."},
+  {q:"Si te golpeas fuerte la cabeza, debes...",o:["Esperar a ver si duele","Consultar de inmediato","Tomar doble dosis"],c:1,f:"Con warfarina, un golpe en la cabeza requiere revisión urgente."},
+  {q:"Antes de una cirugía debes...",o:["Suspenderla tú mismo","Avisar y que el médico decida","No decir nada"],c:1,f:"Nunca la suspendas solo. El médico planea la pausa."},
+  {q:"En el embarazo, la warfarina...",o:["Se usa con confianza","No se usa, puede dañar al bebé","Se toma doble"],c:1,f:"No se usa en el embarazo. Si sospechas embarazo, consulta de inmediato."},
+  {q:"Para viajar, la warfarina va...",o:["En la maleta de bodega","En el equipaje de mano","Se compra al llegar"],c:1,f:"En el equipaje de mano, con dosis de sobra y carta médica."},
+  {q:"¿Qué deporte es más seguro?",o:["Boxeo","Nadar o caminar","Motociclismo"],c:1,f:"Evita golpes y caídas. Nadar y caminar son ideales."},
+  {q:"La tarjeta de anticoagulado sirve para...",o:["Descuentos","Avisar a los médicos qué tomas y tu INR","Viajar gratis"],c:1,f:"Enséñala en toda consulta o urgencia."},
+  {q:"Si te enfermas con vómito o diarrea varios días...",o:["No pasa nada","Avisa a tu clínica, puede cambiar el INR","Tomas el doble"],c:1,f:"Enfermedades y perder líquidos pueden alterar el INR."},
+  {q:"¿Cuál alimento recomienda evitar esta guía?",o:["Arroz","Cilantro","Pollo"],c:1,f:"El cilantro tiene bastante vitamina K; la clínica recomienda evitarlo."},
+  {q:"La warfarina hace efecto...",o:["De inmediato","En varios días","En un año"],c:1,f:"Tarda varios días; por eso al inicio a veces se usa una inyección."}
+];
+let idx=0,aciertos=0,respondida=false;
+const elP=document.getElementById('quizPregunta'),elO=document.getElementById('quizOpciones'),elF=document.getElementById('quizFeedback'),elC=document.getElementById('quizConteo'),elB=document.getElementById('quizBarra'),elSig=document.getElementById('quizSiguiente'),elAc=document.getElementById('quizAciertos');
+function pintarPregunta(){
+  respondida=false;const p=preguntas[idx];
+  elC.textContent=`Pregunta ${idx+1} de ${preguntas.length}`;
+  elB.style.width=(idx/preguntas.length*100)+'%';
+  elP.textContent=p.q;elF.className='quiz-feedback';elF.textContent='';
+  elSig.disabled=true;elSig.textContent=idx===preguntas.length-1?'Ver resultado':'Siguiente →';
+  elO.innerHTML='';
+  p.o.forEach((op,i)=>{const b=document.createElement('button');b.className='quiz-op';b.textContent=op;b.onclick=()=>responder(i,b);elO.appendChild(b);});
+}
+function responder(i,btn){
+  if(respondida)return;respondida=true;const p=preguntas[idx];
+  const botones=elO.querySelectorAll('.quiz-op');botones.forEach(b=>b.classList.add('bloq'));
+  if(i===p.c){btn.classList.add('correcta');aciertos++;elAc.textContent=aciertos;elF.className='quiz-feedback ok';elF.innerHTML='✓ ¡Correcto! '+p.f;}
+  else{btn.classList.add('incorrecta');botones[p.c].classList.add('correcta');elF.className='quiz-feedback mal';elF.innerHTML='✕ Casi. '+p.f;}
+  elSig.disabled=false;
+}
+function siguientePregunta(){if(idx<preguntas.length-1){idx++;pintarPregunta();}else{mostrarResultado();}}
+function mostrarResultado(){
+  document.getElementById('quizJuego').style.display='none';
+  const r=document.getElementById('quizResultado');r.style.display='block';
+  document.getElementById('quizPuntaje').textContent=aciertos;
+  const arco=document.getElementById('medidorArco'),pct=aciertos/preguntas.length;
+  arco.style.strokeDashoffset=314-(314*pct);
+  arco.style.stroke=pct>=0.8?'#1f9d6b':pct>=0.5?'#e8820c':'#d93a3a';
+  const msg=document.getElementById('quizMensaje'),con=document.getElementById('quizConsejo');
+  if(pct>=0.8){msg.textContent='¡Excelente! Sabes cuidar tu tratamiento con warfarina.';con.textContent='Repasa de vez en cuando y sigue así.';}
+  else if(pct>=0.5){msg.textContent='¡Bien! Vas por buen camino.';con.textContent='Vuelve a leer las secciones de los temas que fallaste.';}
+  else{msg.textContent='Sigue practicando.';con.textContent='Te recomendamos leer de nuevo la guía con calma. Puedes pedir ayuda a tu enfermera o farmaceuta.';}
+}
+function reiniciarQuiz(){idx=0;aciertos=0;elAc.textContent='0';document.getElementById('quizResultado').style.display='none';document.getElementById('quizJuego').style.display='block';pintarPregunta();}
+pintarPregunta();
+activarReveal();
+</script>
+</body>
+</html>

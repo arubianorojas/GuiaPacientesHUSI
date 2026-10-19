@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Guías educativas para pacientes anticoagulados del Hospital Universitario San Ignacio: anticoagulantes inyectables y anticoagulantes orales directos (DOAC).">
+<title>Guías para pacientes anticoagulados | HUSI</title>
+<style>
+:root{
+  --azul-husi:#0a4c9c;--azul-oscuro:#063a7a;--azul-profundo:#042a5c;--azul-medio:#1565c0;
+  --azul-claro:#e8f1fb;--blanco:#fff;--gris-suave:#5b6b7b;--gris-linea:#dbe6f2;
+  --verde:#1f9d6b;--morado:#6a4bbc;--sombra:0 12px 34px rgba(6,58,122,.16);
+  --fuente:'Segoe UI',system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--fuente);color:#2b3a4a;line-height:1.7;background:#f6f9fd;min-height:100vh;display:flex;flex-direction:column}
+a{text-decoration:none;color:inherit}
+.hero{background:linear-gradient(135deg,var(--azul-husi),var(--azul-profundo));color:#fff;padding:44px 22px 90px;position:relative;overflow:hidden;text-align:center}
+.hero::after{content:"";position:absolute;right:-140px;top:-140px;width:440px;height:440px;background:radial-gradient(circle,rgba(255,255,255,.12),transparent 70%);border-radius:50%}
+.marca{display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:28px;position:relative;z-index:2}
+.marca .txt{text-align:left;line-height:1.1}
+.marca .txt b{display:block;font-family:Georgia,'Times New Roman',serif;font-size:1rem;letter-spacing:.3px}
+.marca .txt span{font-size:.62rem;letter-spacing:1.5px;opacity:.85}
+.hero h1{font-size:2.1rem;max-width:760px;margin:0 auto 14px;position:relative;z-index:2}
+.hero p{font-size:1.15rem;color:#e3edfb;max-width:620px;margin:0 auto;position:relative;z-index:2}
+.wrap{max-width:900px;margin:-56px auto 0;padding:0 22px;position:relative;z-index:5;flex:1}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+@media(max-width:900px){.grid{grid-template-columns:1fr}}
+@media(max-width:760px){.hero h1{font-size:1.7rem}}
+.card{background:#fff;border-radius:20px;box-shadow:var(--sombra);padding:32px 26px;text-align:center;transition:.3s cubic-bezier(.4,0,.2,1);border-top:6px solid var(--azul-husi);display:flex;flex-direction:column}
+.card:hover{transform:translateY(-8px);box-shadow:0 22px 46px rgba(6,58,122,.24)}
+.card.doac{border-top-color:var(--verde)}
+.card.warf{border-top-color:#6a4bbc}
+.card.warf .pill{background:#efeafb;color:#6a4bbc}
+.card.warf .btn{background:#6a4bbc}
+.card .ilus{width:110px;height:110px;margin:0 auto 16px;display:flex;align-items:center;justify-content:center}
+.card h2{color:var(--azul-oscuro);font-size:1.35rem;margin-bottom:8px}
+.card p{color:var(--gris-suave);font-size:.98rem;margin-bottom:18px;flex:1}
+.card .meds{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-bottom:20px}
+.card .pill{background:var(--azul-claro);color:var(--azul-husi);font-weight:700;font-size:.78rem;padding:4px 12px;border-radius:20px}
+.card.doac .pill{background:#e5f6ee;color:var(--verde)}
+.card .btn{display:inline-block;background:var(--azul-husi);color:#fff;padding:13px 30px;border-radius:40px;font-weight:800;font-size:1rem;transition:.3s}
+.card.doac .btn{background:var(--verde)}
+.card:hover .btn{filter:brightness(1.08)}
+.nota{background:#fff;border:1px solid var(--gris-linea);border-left:6px solid var(--azul-medio);border-radius:12px;padding:16px 20px;margin:28px 0;display:flex;gap:14px;align-items:flex-start;box-shadow:0 6px 22px rgba(6,58,122,.08)}
+.nota svg{flex:none}
+.nota p{margin:0;font-size:.95rem;color:var(--gris-suave)}
+.contacto{background:linear-gradient(135deg,var(--verde),#147951);color:#fff;border-radius:18px;padding:26px 28px;margin-bottom:36px}
+.contacto h3{margin-bottom:6px}
+.contacto p{margin:0 0 12px;color:#eafff5;font-size:.95rem}
+.contacto a{color:#fff;text-decoration:underline;font-weight:600}
+.contacto .fila{display:flex;gap:10px;align-items:center;margin-bottom:6px;font-size:.95rem}
+footer{background:var(--azul-profundo);color:#9db8db;text-align:center;padding:22px;font-size:.82rem;margin-top:auto}
+.hvp-back-wrap{position:relative;z-index:6;text-align:left;margin-bottom:18px}
+.hvp-back{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.16);color:#fff;padding:10px 18px;border-radius:24px;font-weight:700;font-size:.85rem;border:1px solid rgba(255,255,255,.4);text-decoration:none;min-height:40px}
+.hvp-back:hover{background:rgba(255,255,255,.28)}
+.hvp-back:focus-visible{outline:3px solid #fff;outline-offset:2px}
+.hvp-footer-link{display:block;margin-top:8px;color:#fff;font-weight:700;text-decoration:underline}
+.hvp-footer-link:hover{color:#cfe0f5}
+
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="hvp-back-wrap">
+    <a href="index.html" class="hvp-back" aria-label="Volver a Guías para Pacientes">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      Volver a Guías para Pacientes
+    </a>
+  </div>
+  <div class="marca">
+    <span style="background:#fff;border-radius:16px;padding:14px 20px;display:inline-flex">
+      <img src="logo-husi.png" alt="Hospital Universitario San Ignacio" style="height:150px;width:auto;display:block">
+    </span>
+  </div>
+  <h1>Guías para pacientes anticoagulados</h1>
+  <p>Material educativo de la Clínica de Anticoagulación. Elige tu tipo de medicamento para aprender a usarlo de forma segura.</p>
+</header>
+
+<main class="wrap">
+  <div class="grid">
+    <a class="card" href="anticoagulantes-inyectables.html">
+      <div class="ilus">
+        <svg viewBox="0 0 100 100" width="100" height="100" aria-label="Anticoagulantes inyectables">
+          <rect x="20" y="42" width="52" height="16" rx="4" fill="#e8f1fb" stroke="#0a4c9c" stroke-width="2.5"/>
+          <rect x="24" y="45" width="30" height="10" rx="2" fill="#bcd8f7"/>
+          <line x1="30" y1="42" x2="30" y2="58" stroke="#0a4c9c" stroke-width="1.5"/>
+          <line x1="40" y1="42" x2="40" y2="58" stroke="#0a4c9c" stroke-width="1.5"/>
+          <rect x="70" y="46" width="6" height="8" rx="2" fill="#0a4c9c"/>
+          <line x1="76" y1="50" x2="90" y2="50" stroke="#8aa9c9" stroke-width="2.5"/>
+          <rect x="12" y="38" width="8" height="24" rx="3" fill="#0a4c9c"/>
+          <circle cx="83" cy="66" r="3" fill="#d93a3a"/>
+        </svg>
+      </div>
+      <h2>Anticoagulantes inyectables</h2>
+      <p>Guía para aplicar tu inyección bajo la piel de forma segura, paso a paso.</p>
+      <div class="meds"><span class="pill">Enoxaparina</span><span class="pill">Dalteparina</span><span class="pill">Fondaparinux</span></div>
+      <span class="btn">Abrir guía →</span>
+    </a>
+
+    <a class="card doac" href="anticoagulantes-orales-directos.html">
+      <div class="ilus">
+        <svg viewBox="0 0 100 100" width="100" height="100" aria-label="Anticoagulantes orales directos">
+          <ellipse cx="38" cy="50" rx="22" ry="13" fill="#e5f6ee" stroke="#1f9d6b" stroke-width="2.5" transform="rotate(-28 38 50)"/>
+          <line x1="30" y1="58" x2="46" y2="42" stroke="#1f9d6b" stroke-width="2.5"/>
+          <circle cx="66" cy="42" r="15" fill="#e5f6ee" stroke="#1f9d6b" stroke-width="2.5"/>
+          <line x1="56" y1="42" x2="76" y2="42" stroke="#1f9d6b" stroke-width="2.5"/>
+        </svg>
+      </div>
+      <h2>Anticoagulantes orales directos (DOAC)</h2>
+      <p>Guía para tomar tus pastillas anticoagulantes de forma correcta y segura.</p>
+      <div class="meds"><span class="pill">Apixabán</span><span class="pill">Rivaroxabán</span><span class="pill">Dabigatrán</span><span class="pill">Edoxabán</span></div>
+      <span class="btn">Abrir guía →</span>
+    </a>
+
+    <a class="card warf" href="warfarina.html">
+      <div class="ilus">
+        <svg viewBox="0 0 100 100" width="100" height="100" aria-label="Warfarina">
+          <circle cx="50" cy="46" r="20" fill="#e8f1fb" stroke="#0a4c9c" stroke-width="2.5"/>
+          <line x1="50" y1="26" x2="50" y2="66" stroke="#0a4c9c" stroke-width="2" stroke-dasharray="4 3"/>
+          <text x="50" y="51" font-size="13" fill="#0a4c9c" text-anchor="middle" font-weight="bold">5 mg</text>
+          <path d="M20 78 h60" stroke="#0a4c9c" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="32" cy="78" r="4" fill="#1f9d6b"/><circle cx="50" cy="78" r="4" fill="#e8a300"/><circle cx="68" cy="78" r="4" fill="#d93a3a"/>
+        </svg>
+      </div>
+      <h2>Warfarina</h2>
+      <p>Guía para tomar la warfarina, entender tu INR y cuidar la vitamina K.</p>
+      <div class="meds"><span class="pill">Warfarina</span><span class="pill">Coumadin®</span><span class="pill">INR</span></div>
+      <span class="btn">Abrir guía →</span>
+    </a>
+  </div>
+
+  <div class="nota">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1565c0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-5M12 8h.01"/></svg>
+    <p>Este material es educativo y no reemplaza la indicación de tu médico. Ante cualquier duda, comunícate con tu equipo de salud o con la Clínica de Anticoagulación.</p>
+  </div>
+
+  <div class="contacto">
+    <h3>Agenda tu cita en la Clínica de Anticoagulación</h3>
+    <p>Para programar su cita, escríbanos o llámenos:</p>
+    <div class="fila">✉ <a href="mailto:clinicadeanticoagulacion@husi.org.co">clinicadeanticoagulacion@husi.org.co</a></div>
+    <div class="fila">☎ <a href="tel:9103211272">910 321 1272</a> &nbsp;·&nbsp; <a href="tel:6015946161">601 594 6161</a> ext. 2343</div>
+  </div>
+</main>
+
+<footer>© <span id="anio"></span> Hospital Universitario San Ignacio · Clínica de Anticoagulación · Material educativo para pacientes.<a href="index.html" class="hvp-footer-link">← Volver a Guías para Pacientes</a></footer>
+<script>document.getElementById('anio').textContent=new Date().getFullYear();</script>
+</body>
+</html>
